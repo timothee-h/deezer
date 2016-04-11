@@ -1,1 +1,289 @@
 @import "compass/reset";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+$bg-color: #23232c;
+$hover-color: rgb(24, 104, 205);
+$color: lightgray;
+$opacity: 0.8;
+
+* {box-sizing: border-box}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.leftnav {
+  width: 210px;
+  background-color: $bg-color;
+  height: 100%;
+  position: fixed;
+  bottom: 70px;
+  opacity: $opacity;
+  padding-top: 70px;
+  &--header {
+    padding: 20px 20px 0 20px;
+    text-align: center;
+    &--logo {
+      &--img {
+        margin-right: 10px;
+        width: 120px;
+      }
+    }
+  }
+  &--primary {
+    ul {
+      margin-top: 30px;
+      li {
+        height: 35px;
+        width: 100%;
+        a {
+          font-size: 13px;
+          text-transform: uppercase;
+          display: block;
+          color: lightgray;
+          text-decoration: none;
+          padding-left: 20px;
+          height: 35px;
+          line-height: 33px;
+          width: 100%;
+          border-left: 2px solid rgba(24, 104, 205, 0);
+          transition-duration: 0.2s;
+          &:hover {
+            background-color: $bg-color;
+            border-left: 2px solid $hover-color;
+            color: #fff;
+          }
+        }
+        #current {
+          background-color: $bg-color;
+          border-left: 2px solid $hover-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &--secondary {
+    ul {
+      margin-top: 20px;
+      li {
+        height: 35px;
+        width: 100%;
+        a {
+          font-size: 13px;
+          display: block;
+          color: lightgray;
+          text-decoration: none;
+          padding-left: 40px;
+          height: 35px;
+          line-height: 33px;
+          width: 100%;
+          border-left: 2px solid rgba(24, 104, 205, 0);
+          transition-duration: 0.2s;
+          &:hover {
+            background-color: #1f1f28;
+            border-left: 2px solid $hover-color;
+            color: #fff;
+          }
+          &::before {
+            margin-right: 10px;
+            font-family: FontAwesome;
+            position: absolute;
+            left: 20px;
+          }
+        }
+        #current {
+          background-color: #1f1f28;
+          border-left: 2px solid $hover-color;
+        }
+      }
+    }
+    &--1::before {
+      content: "\f004";
+    }
+    &--2::before {
+      content: "\f03a";
+    }
+    &--3::before {
+      content: "\f001";
+    }
+    &--4::before {
+      content: "\f09e";
+    }
+    &--5::before {
+      content: "\f0fe";
+    }
+  }
+  &--profil {
+    margin-top: 20px;
+    position: relative;
+    &--tag {
+      position: relative;
+      font-size: 13px;
+      display: inline-block;
+      color: lightgray;
+      text-decoration: none;
+      padding-left: 60px;
+      height: 35px;
+      line-height: 33px;
+      width: 100%;
+      border-left: 2px solid rgba(24, 104, 205, 0);
+      margin-bottom: 30px;
+      &::before {
+        font-family: FontAwesome;
+        content: "\f007";
+        display: block;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 1px solid lightgray;
+        position: absolute;
+        left: 15px;
+        text-align: center;
+      }
+    }
+    &--config {
+      position: absolute;
+      right: 15px;
+      top: 7px;
+      color: lightgray;
+      text-decoration: none;
+      &::after {
+        font-family: FontAwesome;
+        content: "\f013";
+        font-size: 20px;
+      }
+    }
+    &--abonne {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 42px;
+      font-size: 13px;
+      text-transform: uppercase;
+      background-color: $hover-color;
+      border-radius: 3px;
+      margin-left: 20px;
+      &:hover {
+        color: #fff;
+        background-color: rgb(15, 76, 153);
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $bg-color;
+  opacity: $opacity;
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  bottom: 0;
+  &--player {
+    height: 2px;
+    background-color: $color;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 2px;
+      background-color: $hover-color;
+      width: 400px;
+    }
+  }
+  &--current {
+    float: left;
+    color: $color;
+    &--img {
+      height: 70px;
+      width: 70px;
+    }
+    &--title {
+      display: inline-block;
+      bottom: 38px;
+      left: 85px;
+      position: absolute;
+      font-weight: 100;
+    }
+    &--artist {
+      display: inline-block;
+      bottom: 14px;
+      left: 85px;
+      position: absolute;
+      font-weight: 600;
+    }
+  }
+  &--controller {
+    color: $color;
+    width: 220px;
+    margin: auto;
+    &--icons1,
+    &--icons2,
+    &--icons3,
+    &--icons4,
+    &--icons5 {
+      position: relative;
+      color: $color;
+      display: inline-block;
+      text-decoration: none;
+      margin: 25px 20px 0 20px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &::before {
+        font-family: FontAwesome;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+      }
+      &:hover {
+        color: $hover-color;
+        transition: all 0.2s ease;
+      }
+    }
+    &--icons1::before {
+      content: "\f01e";
+    }
+    &--icons2::before {
+      content: "\f04a";
+    }
+    &--icons3::before {
+      content: "\f04b";
+    }
+    &--icons4::before {
+      content: "\f04e";
+    }
+    &--icons5::before {
+      content: "\f074";
+    }
+  }
+  &--search {
+    position: absolute;
+    top: 24px;
+    right: 8px;
+    &--input {
+      position: relative;
+      margin-right: 20px;
+      border-radius: 10px;
+      border: none;
+      padding: 5px 15px;
+      &:focus {
+        outline: none;
+        color: #393939;
+      }
+    }
+  }
+}
+
+.background {
+  background: url('../img/darkside.jpg') no-repeat center center;
+  background-size: cover;
+  position: fixed;
+  height: 110%;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  filter: blur(10px);
+  z-index: -1;
+}

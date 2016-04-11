@@ -5,23 +5,76 @@
   <title>Deezer</title>
   <meta name="description" content=""/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/jquery-ui.min.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-  <!--header-->
-  <header class="header">
-
-  </header>
   <!--left navbar-->
-  <div class="lefttnav">
-
+  <div class="leftnav">
+    <header class="leftnav--header">
+      <a class="leftnav--header--logo" href="index.html" title="Accueil">
+        <img class="leftnav--header--logo--img" src="img/logo.png" alt="Logo deezer">
+      </a>
+    </header>
+    <div class="leftnav--primary">
+      <ul>
+        <li><a id="current" href="#">Accueil</a></li>
+        <li><a href="#">À Écouter</a></li>
+        <li><a href="#">Nouveautés</a></li>
+        <li><a href="#">Top playlists</a></li>
+        <li><a href="#">Mix</a></li>
+        <li><a href="#">Infos & divertissement</a></li>
+        <li><a href="#">Ambiances</a></li>
+      </ul>
+    </div>
+    <div class="leftnav--secondary">
+      <ul>
+        <li><a class="leftnav--secondary--1" href="#">Coups de coeur</a></li>
+        <li><a class="leftnav--secondary--2" href="#">Playlists</a></li>
+        <li><a class="leftnav--secondary--3" href="#">Albums</a></li>
+        <li><a class="leftnav--secondary--4" href="#">Podcasts</a></li>
+        <li><a class="leftnav--secondary--5" href="#">Applications</a></li>
+      </ul>
+    </div>
+    <footer class="leftnav--profil">
+      <a class="leftnav--profil--tag" href="#">Mon profil</a>
+      <a class="leftnav--profil--config" href="#"></a>
+      <a class="leftnav--profil--abonne" href="#">+ S'abonner</a>
+    </footer>
   </div>
-  <!--left navbar-->
+  <!--content-->
   <div class="content">
 
   </div>
+  <!--footer-->
+  <footer class="footer">
+    <div class="footer--player">
+    </div>
+    <div class="footer--current">
+      <img class="footer--current--img" src="img/darkside.jpg" alt="cover">
+      <span class="footer--current--title">La musique</span>
+      <span class="footer--current--artist">L'artiste</span>
+    </div>
+    <div class="footer--controller">
+      <span class="footer--controller--icons1"></span>
+      <span class="footer--controller--icons2"></span>
+      <span class="footer--controller--icons3"></span>
+      <span class="footer--controller--icons4"></span>
+      <span class="footer--controller--icons5"></span>
+    </div>
+    <div class="footer--search">
+      <input type="text" class="footer--search--input" placeholder="Rechercher...">
+    </div>
+  </footer>
+  <!--background album-->
+  <div class="background"></div>
   <!--Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/front.js"></script>
+  <script type="text/javascript" src="js/back.js"></script>
   <noscript>Votre navigateur ne support pas le JavaScript !</noscript>
 </body>
 </html>

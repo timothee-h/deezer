@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,4 +53,283 @@ a img {
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.leftnav {
+  width: 210px;
+  background-color: #23232c;
+  height: 100%;
+  position: fixed;
+  bottom: 70px;
+  opacity: 0.8;
+  padding-top: 70px;
+}
+.leftnav--header {
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+.leftnav--header--logo--img {
+  margin-right: 10px;
+  width: 120px;
+}
+.leftnav--primary ul {
+  margin-top: 30px;
+}
+.leftnav--primary ul li {
+  height: 35px;
+  width: 100%;
+}
+.leftnav--primary ul li a {
+  font-size: 13px;
+  text-transform: uppercase;
+  display: block;
+  color: lightgray;
+  text-decoration: none;
+  padding-left: 20px;
+  height: 35px;
+  line-height: 33px;
+  width: 100%;
+  border-left: 2px solid rgba(24, 104, 205, 0);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.leftnav--primary ul li a:hover {
+  background-color: #23232c;
+  border-left: 2px solid #1868cd;
+  color: #fff;
+}
+.leftnav--primary ul li #current {
+  background-color: #23232c;
+  border-left: 2px solid #1868cd;
+  color: #fff;
+}
+.leftnav--secondary ul {
+  margin-top: 20px;
+}
+.leftnav--secondary ul li {
+  height: 35px;
+  width: 100%;
+}
+.leftnav--secondary ul li a {
+  font-size: 13px;
+  display: block;
+  color: lightgray;
+  text-decoration: none;
+  padding-left: 40px;
+  height: 35px;
+  line-height: 33px;
+  width: 100%;
+  border-left: 2px solid rgba(24, 104, 205, 0);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.leftnav--secondary ul li a:hover {
+  background-color: #1f1f28;
+  border-left: 2px solid #1868cd;
+  color: #fff;
+}
+.leftnav--secondary ul li a::before {
+  margin-right: 10px;
+  font-family: FontAwesome;
+  position: absolute;
+  left: 20px;
+}
+.leftnav--secondary ul li #current {
+  background-color: #1f1f28;
+  border-left: 2px solid #1868cd;
+}
+.leftnav--secondary--1::before {
+  content: "\f004";
+}
+.leftnav--secondary--2::before {
+  content: "\f03a";
+}
+.leftnav--secondary--3::before {
+  content: "\f001";
+}
+.leftnav--secondary--4::before {
+  content: "\f09e";
+}
+.leftnav--secondary--5::before {
+  content: "\f0fe";
+}
+.leftnav--profil {
+  margin-top: 20px;
+  position: relative;
+}
+.leftnav--profil--tag {
+  position: relative;
+  font-size: 13px;
+  display: inline-block;
+  color: lightgray;
+  text-decoration: none;
+  padding-left: 60px;
+  height: 35px;
+  line-height: 33px;
+  width: 100%;
+  border-left: 2px solid rgba(24, 104, 205, 0);
+  margin-bottom: 30px;
+}
+.leftnav--profil--tag::before {
+  font-family: FontAwesome;
+  content: "\f007";
+  display: block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  position: absolute;
+  left: 15px;
+  text-align: center;
+}
+.leftnav--profil--config {
+  position: absolute;
+  right: 15px;
+  top: 7px;
+  color: lightgray;
+  text-decoration: none;
+}
+.leftnav--profil--config::after {
+  font-family: FontAwesome;
+  content: "\f013";
+  font-size: 20px;
+}
+.leftnav--profil--abonne {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 42px;
+  font-size: 13px;
+  text-transform: uppercase;
+  background-color: #1868cd;
+  border-radius: 3px;
+  margin-left: 20px;
+}
+.leftnav--profil--abonne:hover {
+  color: #fff;
+  background-color: #0f4c99;
+}
+
+.footer {
+  background-color: #23232c;
+  opacity: 0.8;
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  bottom: 0;
+}
+.footer--player {
+  height: 2px;
+  background-color: lightgray;
+  position: relative;
+}
+.footer--player::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background-color: #1868cd;
+  width: 400px;
+}
+.footer--current {
+  float: left;
+  color: lightgray;
+}
+.footer--current--img {
+  height: 70px;
+  width: 70px;
+}
+.footer--current--title {
+  display: inline-block;
+  bottom: 38px;
+  left: 85px;
+  position: absolute;
+  font-weight: 100;
+}
+.footer--current--artist {
+  display: inline-block;
+  bottom: 14px;
+  left: 85px;
+  position: absolute;
+  font-weight: 600;
+}
+.footer--controller {
+  color: lightgray;
+  width: 220px;
+  margin: auto;
+}
+.footer--controller--icons1, .footer--controller--icons2, .footer--controller--icons3, .footer--controller--icons4, .footer--controller--icons5 {
+  position: relative;
+  color: lightgray;
+  display: inline-block;
+  text-decoration: none;
+  margin: 25px 20px 0 20px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.footer--controller--icons1::before, .footer--controller--icons2::before, .footer--controller--icons3::before, .footer--controller--icons4::before, .footer--controller--icons5::before {
+  font-family: FontAwesome;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+.footer--controller--icons1:hover, .footer--controller--icons2:hover, .footer--controller--icons3:hover, .footer--controller--icons4:hover, .footer--controller--icons5:hover {
+  color: #1868cd;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.footer--controller--icons1::before {
+  content: "\f01e";
+}
+.footer--controller--icons2::before {
+  content: "\f04a";
+}
+.footer--controller--icons3::before {
+  content: "\f04b";
+}
+.footer--controller--icons4::before {
+  content: "\f04e";
+}
+.footer--controller--icons5::before {
+  content: "\f074";
+}
+.footer--search {
+  position: absolute;
+  top: 24px;
+  right: 8px;
+}
+.footer--search--input {
+  position: relative;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 15px;
+}
+.footer--search--input:focus {
+  outline: none;
+  color: #393939;
+}
+
+.background {
+  background: url("../img/darkside.jpg") no-repeat center center;
+  background-size: cover;
+  position: fixed;
+  height: 110%;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  z-index: -1;
 }
