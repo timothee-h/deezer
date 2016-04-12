@@ -134,31 +134,37 @@ body {
   }
   &--secondary {
     ul {
-      margin-top: 20px;
+      margin-top: 10px;
+      height: 160px;
       li {
-        height: 35px;
-        width: 100%;
+        height: 50px;
+        width: 105px;
+        display: inline-block;
+        float: left;
         a {
           font-size: 13px;
-          display: block;
+          display: inline-block;
           color: lightgray;
           text-decoration: none;
           padding-left: 40px;
-          height: 35px;
+          height: 50px;
           line-height: 33px;
-          width: 100%;
-          border-left: 2px solid rgba(24, 104, 205, 0);
-          transition-duration: 0.2s;
+          width: 105px;
+          position: relative;
+          border: 1px solid #1f1f28;
+          transition-duration: 0.3s;
           &:hover {
             background-color: #1f1f28;
-            border-left: 2px solid $hover-color;
             color: #fff;
+            border-bottom: 1px solid $hover-color;
           }
           &::before {
-            margin-right: 10px;
             font-family: FontAwesome;
             position: absolute;
-            left: 20px;
+            font-size: 18px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
           }
         }
         #current {
@@ -181,6 +187,9 @@ body {
     }
     &--5::before {
       content: "\f0fe";
+    }
+    &--6::before {
+      content: "\f013";
     }
   }
   &--profil {
@@ -234,18 +243,6 @@ body {
         position: absolute;
         left: 15px;
         text-align: center;
-      }
-    }
-    &--config {
-      position: absolute;
-      right: 15px;
-      top: 7px;
-      color: lightgray;
-      text-decoration: none;
-      &::after {
-        font-family: FontAwesome;
-        content: "\f013";
-        font-size: 20px;
       }
     }
     &--abonne {
@@ -407,6 +404,7 @@ body {
   left: -5%;
   top: -5%;
   width: 110%;
+  -webkit-filter:blur(20px);
   filter: blur(20px);
   z-index: -1;
 }

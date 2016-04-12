@@ -186,35 +186,42 @@ body {
   color: #fff;
 }
 .leftnav--secondary ul {
-  margin-top: 20px;
+  margin-top: 10px;
+  height: 160px;
 }
 .leftnav--secondary ul li {
-  height: 35px;
-  width: 100%;
+  height: 50px;
+  width: 105px;
+  display: inline-block;
+  float: left;
 }
 .leftnav--secondary ul li a {
   font-size: 13px;
-  display: block;
+  display: inline-block;
   color: lightgray;
   text-decoration: none;
   padding-left: 40px;
-  height: 35px;
+  height: 50px;
   line-height: 33px;
-  width: 100%;
-  border-left: 2px solid rgba(24, 104, 205, 0);
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  width: 105px;
+  position: relative;
+  border: 1px solid #1f1f28;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .leftnav--secondary ul li a:hover {
   background-color: #1f1f28;
-  border-left: 2px solid #1868cd;
   color: #fff;
+  border-bottom: 1px solid #1868cd;
 }
 .leftnav--secondary ul li a::before {
-  margin-right: 10px;
   font-family: FontAwesome;
   position: absolute;
-  left: 20px;
+  font-size: 18px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .leftnav--secondary ul li #current {
   background-color: #1f1f28;
@@ -234,6 +241,9 @@ body {
 }
 .leftnav--secondary--5::before {
   content: "\f0fe";
+}
+.leftnav--secondary--6::before {
+  content: "\f013";
 }
 .leftnav--profil {
   margin-top: 20px;
@@ -288,18 +298,6 @@ body {
   position: absolute;
   left: 15px;
   text-align: center;
-}
-.leftnav--profil--config {
-  position: absolute;
-  right: 15px;
-  top: 7px;
-  color: lightgray;
-  text-decoration: none;
-}
-.leftnav--profil--config::after {
-  font-family: FontAwesome;
-  content: "\f013";
-  font-size: 20px;
 }
 .leftnav--profil--abonne {
   color: #fff;
@@ -457,7 +455,7 @@ body {
   top: -5%;
   width: 110%;
   -webkit-filter: blur(20px);
-          filter: blur(20px);
+  filter: blur(20px);
   z-index: -1;
 }
 
