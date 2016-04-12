@@ -68,7 +68,7 @@ body {
   background-color: #23232c;
   height: 100%;
   position: fixed;
-  bottom: 70px;
+  bottom: 74px;
   opacity: 0.8;
   padding-top: 70px;
 }
@@ -87,7 +87,8 @@ body {
   content: "\f0eb";
   color: #fff;
   font-size: 20px;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .leftnav--night:hover::after {
   color: #eb9400;
@@ -107,7 +108,8 @@ body {
   content: "\f0eb";
   color: #eb9400;
   font-size: 20px;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .leftnav--night--active:hover::after {
   color: #1868cd;
@@ -117,11 +119,12 @@ body {
   height: 100%;
   width: 15px;
   position: absolute;
-  background-color: #252525;
+  background-color: #1d1d20;
   right: -15px;
   bottom: 0px;
   text-align: center;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .leftnav--btn::after {
   font-family: FontAwesome;
@@ -130,10 +133,12 @@ body {
   color: #525252;
   margin-top: 30px;
   top: 50%;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   right: 1px;
   font-size: 15px;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .leftnav--btn:hover {
   background-color: #3d3c3c;
@@ -167,15 +172,16 @@ body {
   line-height: 33px;
   width: 100%;
   border-left: 2px solid rgba(24, 104, 205, 0);
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 .leftnav--primary ul li a:hover {
-  background-color: #23232c;
+  background-color: #1f1f28;
   border-left: 2px solid #1868cd;
   color: #fff;
 }
 .leftnav--primary ul li #current {
-  background-color: #23232c;
+  background-color: #1f1f28;
   border-left: 2px solid #1868cd;
   color: #fff;
 }
@@ -196,7 +202,8 @@ body {
   line-height: 33px;
   width: 100%;
   border-left: 2px solid rgba(24, 104, 205, 0);
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 .leftnav--secondary ul li a:hover {
   background-color: #1f1f28;
@@ -323,9 +330,11 @@ body {
   background-color: lightgray;
   position: absolute;
   bottom: 70px;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .footer--player--progress {
+  opacity: 1;
   content: '';
   display: block;
   height: 4px;
@@ -383,6 +392,7 @@ body {
   margin: 25px 20px 0 20px;
   font-size: 20px;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .footer--controller--icons1::before, .footer--controller--icons2::before, .footer--controller--icons3::before, .footer--controller--icons4::before, .footer--controller--icons5::before, .footer--controller--icons6::before {
@@ -394,6 +404,7 @@ body {
 }
 .footer--controller--icons1:hover, .footer--controller--icons2:hover, .footer--controller--icons3:hover, .footer--controller--icons4:hover, .footer--controller--icons5:hover, .footer--controller--icons6:hover {
   color: #1868cd;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .footer--controller--icons1::before {
@@ -438,13 +449,20 @@ body {
 }
 
 .background {
-  background: url("../img/darkside.jpg") no-repeat center center;
+  background: url("../img/beatles.jpg") no-repeat center center;
   background-size: cover;
   position: fixed;
   height: 110%;
   left: -5%;
   top: -5%;
   width: 110%;
-  filter: blur(15px);
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
   z-index: -1;
 }
+
+/*==============================*\
+
+  #Content
+
+\*==============================*/

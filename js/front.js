@@ -71,20 +71,24 @@ $( document ).ready(function() {
       $("#current").css({backgroundColor: '#d1cdcd'});
       $("a").css({color: '#23232c'});
       $("span").css({color: '#23232c'});
+      $(".footer--player--progress").css({backgroundColor: 'orange'});
+      $(".footer--player").css({backgroundColor: '#23232c'});
       $(".leftnav--profil--abonne").css({backgroundColor: 'orange'});
-        $(".leftnav--night").addClass('leftnav--night--active');
-        $(".leftnav--night--active").removeClass('leftnav--night');
-        $(".leftnav--profil--tag").addClass('leftnav--profil--tag--active');
-        $(".leftnav--profil--tag--active").removeClass('leftnav--profil--tag');
+      $(".leftnav--night").addClass('leftnav--night--active');
+      $(".leftnav--night--active").removeClass('leftnav--night');
+      $(".leftnav--profil--tag").addClass('leftnav--profil--tag--active');
+      $(".leftnav--profil--tag--active").removeClass('leftnav--profil--tag');
       light = true;
     }
     else {
       $(".leftnav").css({backgroundColor: '#23232c'});
       $(".footer").css({backgroundColor: '#23232c'});
-      $(".leftnav--btn").css({backgroundColor: '#23232c'});
+      $(".leftnav--btn").css({backgroundColor: '#1d1d20'});
       $("#current").css({backgroundColor: '#23232c'});
       $("a").css({color: '#ececec'});
       $("span").css({color: '#ececec'});
+      $(".footer--player--progress").css({backgroundColor: 'rgb(24, 104, 205)'});
+      $(".footer--player").css({backgroundColor: 'lightgray'});
       $(".leftnav--profil--abonne").css({backgroundColor: 'rgb(24, 104, 205)'});
       $(".leftnav--profil--tag--active").addClass('leftnav--profil--tag');
       $(".leftnav--profil--tag").removeClass('leftnav--profil--tag--active');
