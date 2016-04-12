@@ -221,23 +221,28 @@ body {
   background-color: #23232c;
   opacity: 0.8;
   width: 100%;
-  height: 72px;
+  height: 70px;
   position: fixed;
   bottom: 0;
 }
 .footer--player {
   height: 2px;
+  width: 100%;
   background-color: lightgray;
-  position: relative;
+  position: absolute;
+  bottom: 70px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .footer--player::before {
   content: '';
   display: block;
-  position: absolute;
-  top: 0;
-  height: 2px;
+  height: 100%;
   background-color: #1868cd;
   width: 400px;
+}
+.footer--player:hover {
+  height: 4px;
 }
 .footer--current {
   float: left;
@@ -303,6 +308,12 @@ body {
 }
 .footer--controller--icons5::before {
   content: "\f074";
+}
+.footer--volume {
+  position: absolute;
+  left: 65%;
+  bottom: 2px;
+  height: 50px;
 }
 .footer--search {
   position: absolute;

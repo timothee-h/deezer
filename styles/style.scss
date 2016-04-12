@@ -5,6 +5,7 @@ $bg-color: #23232c;
 $hover-color: rgb(24, 104, 205);
 $color: lightgray;
 $opacity: 0.8;
+$duration: 0.3s;
 
 * {box-sizing: border-box}
 
@@ -174,21 +175,25 @@ body {
   background-color: $bg-color;
   opacity: $opacity;
   width: 100%;
-  height: 72px;
+  height: 70px;
   position: fixed;
   bottom: 0;
   &--player {
     height: 2px;
+    width: 100%;
     background-color: $color;
-    position: relative;
+    position: absolute;
+    bottom: 70px;
+    transition-duration: $duration;
     &::before {
       content: '';
       display: block;
-      position: absolute;
-      top: 0;
-      height: 2px;
+      height: 100%;
       background-color: $hover-color;
       width: 400px;
+    }
+    &:hover {
+      height: 4px;
     }
   }
   &--current {
@@ -257,6 +262,12 @@ body {
     &--icons5::before {
       content: "\f074";
     }
+  }
+  &--volume {
+    position: absolute;
+    left: 65%;
+    bottom: 2px;
+    height: 50px;
   }
   &--search {
     position: absolute;
