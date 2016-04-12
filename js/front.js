@@ -61,4 +61,34 @@ $( document ).ready(function() {
       visible = true;
     }
   });
+  //night shift
+  var light = false;
+  $(".leftnav--night").click(function() {
+    if (light === false) {
+      $(".leftnav").css({backgroundColor: '#ececec'});
+      $(".footer").css({backgroundColor: '#ececec'});
+      $(".leftnav--btn").css({backgroundColor: '#d1cdcd'});
+      $("#current").css({backgroundColor: '#d1cdcd'});
+      $("a").css({color: '#23232c'});
+      $("span").css({color: '#23232c'});
+      $(".leftnav--profil--abonne").css({backgroundColor: 'orange'});
+        $(".leftnav--night").addClass('leftnav--night--active');
+        $(".leftnav--night--active").removeClass('leftnav--night');
+        $(".leftnav--profil--tag").addClass('leftnav--profil--tag--active');
+        $(".leftnav--profil--tag--active").removeClass('leftnav--profil--tag');
+      light = true;
+    }
+    else {
+      $(".leftnav").css({backgroundColor: '#23232c'});
+      $(".footer").css({backgroundColor: '#23232c'});
+      $(".leftnav--btn").css({backgroundColor: '#23232c'});
+      $("#current").css({backgroundColor: '#23232c'});
+      $("a").css({color: '#ececec'});
+      $("span").css({color: '#ececec'});
+      $(".leftnav--profil--abonne").css({backgroundColor: 'rgb(24, 104, 205)'});
+      $(".leftnav--profil--tag--active").addClass('leftnav--profil--tag');
+      $(".leftnav--profil--tag").removeClass('leftnav--profil--tag--active');
+      light = false;
+    }
+  });
 });

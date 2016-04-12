@@ -112,13 +112,13 @@
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
-		"ignoreWasSetByUser": 1,
+		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/styles\/style.scss",
 		"outputAbbreviatedPath": "\/styles\/style.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
-		"shouldRunAutoprefixer": 1,
+		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		}

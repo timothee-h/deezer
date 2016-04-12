@@ -21,6 +21,46 @@ body {
   bottom: 70px;
   opacity: $opacity;
   padding-top: 70px;
+  &--night {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 95px;
+    right: 10px;
+    text-align: center;
+    cursor: pointer;
+    &::after {
+      font-family: FontAwesome;
+      content: "\f0eb";
+      color: #fff;
+      font-size: 20px;
+      transition-duration: $duration;
+    }
+    &:hover::after {
+      color: #eb9400;
+    }
+  }
+  &--night--active {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 95px;
+    right: 10px;
+    text-align: center;
+    cursor: pointer;
+    &::after {
+      font-family: FontAwesome;
+      content: "\f0eb";
+      color: #eb9400;
+      font-size: 20px;
+      transition-duration: $duration;
+    }
+    &:hover::after {
+      color: rgb(24, 104, 205);
+    }
+  }
   &--btn {
     display: block;
     height: 100%;
@@ -55,7 +95,7 @@ body {
     text-align: center;
     &--logo {
       &--img {
-        margin-right: 10px;
+        margin-right: 20px;
         width: 120px;
       }
     }
@@ -166,6 +206,31 @@ body {
         width: 30px;
         border-radius: 50%;
         border: 1px solid lightgray;
+        position: absolute;
+        left: 15px;
+        text-align: center;
+      }
+    }
+    &--tag--active {
+      position: relative;
+      font-size: 13px;
+      display: inline-block;
+      color: lightgray;
+      text-decoration: none;
+      padding-left: 60px;
+      height: 35px;
+      line-height: 33px;
+      width: 100%;
+      border-left: 2px solid rgba(24, 104, 205, 0);
+      margin-bottom: 30px;
+      &::before {
+        font-family: FontAwesome;
+        content: "\f007";
+        display: block;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 1px solid $bg-color;
         position: absolute;
         left: 15px;
         text-align: center;
