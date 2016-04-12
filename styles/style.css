@@ -226,7 +226,7 @@ body {
   bottom: 0;
 }
 .footer--player {
-  height: 2px;
+  height: 4px;
   width: 100%;
   background-color: lightgray;
   position: absolute;
@@ -234,15 +234,14 @@ body {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
-.footer--player::before {
+.footer--player--progress {
   content: '';
   display: block;
-  height: 100%;
-  background-color: #1868cd;
-  width: 400px;
-}
-.footer--player:hover {
   height: 4px;
+  position: absolute;
+  bottom: 70px;
+  background-color: #1868cd;
+  width: 0;
 }
 .footer--current {
   float: left;
@@ -266,12 +265,26 @@ body {
   position: absolute;
   font-weight: 600;
 }
+.footer--current--time {
+  display: inline-block;
+  bottom: 14px;
+  left: 200px;
+  position: absolute;
+  font-weight: 600;
+}
+.footer--current--duration {
+  display: inline-block;
+  bottom: 14px;
+  left: 240px;
+  position: absolute;
+  font-weight: 100;
+}
 .footer--controller {
   color: lightgray;
   width: 220px;
   margin: auto;
 }
-.footer--controller--icons1, .footer--controller--icons2, .footer--controller--icons3, .footer--controller--icons4, .footer--controller--icons5 {
+.footer--controller--icons1, .footer--controller--icons2, .footer--controller--icons3, .footer--controller--icons4, .footer--controller--icons5, .footer--controller--icons6 {
   position: relative;
   color: lightgray;
   display: inline-block;
@@ -282,14 +295,14 @@ body {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.footer--controller--icons1::before, .footer--controller--icons2::before, .footer--controller--icons3::before, .footer--controller--icons4::before, .footer--controller--icons5::before {
+.footer--controller--icons1::before, .footer--controller--icons2::before, .footer--controller--icons3::before, .footer--controller--icons4::before, .footer--controller--icons5::before, .footer--controller--icons6::before {
   font-family: FontAwesome;
   position: absolute;
   text-align: center;
   top: 0;
   left: 0;
 }
-.footer--controller--icons1:hover, .footer--controller--icons2:hover, .footer--controller--icons3:hover, .footer--controller--icons4:hover, .footer--controller--icons5:hover {
+.footer--controller--icons1:hover, .footer--controller--icons2:hover, .footer--controller--icons3:hover, .footer--controller--icons4:hover, .footer--controller--icons5:hover, .footer--controller--icons6:hover {
   color: #1868cd;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -309,6 +322,9 @@ body {
 .footer--controller--icons5::before {
   content: "\f074";
 }
+.footer--controller--icons6::before {
+  content: "\f04c";
+}
 .footer--volume {
   position: absolute;
   left: 65%;
@@ -317,7 +333,7 @@ body {
 }
 .footer--search {
   position: absolute;
-  top: 24px;
+  top: 22px;
   right: 8px;
 }
 .footer--search--input {

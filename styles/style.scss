@@ -179,21 +179,20 @@ body {
   position: fixed;
   bottom: 0;
   &--player {
-    height: 2px;
+    height: 4px;
     width: 100%;
     background-color: $color;
     position: absolute;
     bottom: 70px;
     transition-duration: $duration;
-    &::before {
+    &--progress {
       content: '';
       display: block;
-      height: 100%;
-      background-color: $hover-color;
-      width: 400px;
-    }
-    &:hover {
       height: 4px;
+      position: absolute;
+      bottom: 70px;
+      background-color: $hover-color;
+      width: 0;
     }
   }
   &--current {
@@ -217,6 +216,20 @@ body {
       position: absolute;
       font-weight: 600;
     }
+    &--time {
+      display: inline-block;
+      bottom: 14px;
+      left: 200px;
+      position: absolute;
+      font-weight: 600;
+    }
+    &--duration {
+      display: inline-block;
+      bottom: 14px;
+      left: 240px;
+      position: absolute;
+      font-weight: 100;
+    }
   }
   &--controller {
     color: $color;
@@ -226,7 +239,8 @@ body {
     &--icons2,
     &--icons3,
     &--icons4,
-    &--icons5 {
+    &--icons5,
+    &--icons6 {
       position: relative;
       color: $color;
       display: inline-block;
@@ -262,6 +276,9 @@ body {
     &--icons5::before {
       content: "\f074";
     }
+    &--icons6::before {
+      content: "\f04c";
+    }
   }
   &--volume {
     position: absolute;
@@ -271,7 +288,7 @@ body {
   }
   &--search {
     position: absolute;
-    top: 24px;
+    top: 22px;
     right: 8px;
     &--input {
       position: relative;

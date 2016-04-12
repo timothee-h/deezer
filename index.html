@@ -50,22 +50,24 @@
   </div>
   <!--footer-->
   <footer class="footer">
-    <div class="footer--player">
-    </div>
+    <div class="footer--player"></div>
+    <div class="footer--player--progress"></div>
     <div class="footer--current">
       <img class="footer--current--img" src="img/darkside.jpg" alt="cover">
       <span class="footer--current--title">La musique</span>
       <span class="footer--current--artist">L'artiste</span>
+      <span class="footer--current--time">----</span>
+      <span class="footer--current--duration">----</span>
     </div>
     <div class="footer--controller">
-      <span class="footer--controller--icons1"></span>
-      <span class="footer--controller--icons2"></span>
-      <span class="footer--controller--icons3"></span>
-      <span class="footer--controller--icons4"></span>
-      <span class="footer--controller--icons5"></span>
+      <span id="replay" class="footer--controller--icons1"></span>
+      <span id="previous" class="footer--controller--icons2"></span>
+      <span id="play" class="footer--controller--icons3"></span>
+      <span id="next" class="footer--controller--icons4"></span>
+      <span id="alea" class="footer--controller--icons5"></span>
     </div>
     <div class="footer--volume">
-      <input class="footer--volume--selector knob" data-width="40" data-heigth="40" data-angleOffset="-125" data-angleArc="250" data-fgColor="rgb(24, 104, 205)" data-displayInput=false value="35">
+      <input id="volume" class="footer--volume--selector knob" data-width="40" data-heigth="40" data-angleOffset="-125" data-angleArc="250" data-fgColor="rgb(24, 104, 205)" data-displayInput=false value="35">
     </div>
     <div class="footer--search">
       <input type="text" class="footer--search--input" placeholder="Rechercher...">
@@ -73,6 +75,8 @@
   </footer>
   <!--background album-->
   <div class="background"></div>
+  <!--music-->
+  <audio id="music1" src="music/music1.mp3" preload="true"></audio>
   <!--Scripts-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="js/jquery.knob.js"></script>
