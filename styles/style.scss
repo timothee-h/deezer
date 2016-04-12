@@ -21,6 +21,35 @@ body {
   bottom: 70px;
   opacity: $opacity;
   padding-top: 70px;
+  &--btn {
+    display: block;
+    height: 100%;
+    width: 15px;
+    position: absolute;
+    background-color: #252525;
+    right: -15px;
+    bottom: 0px;
+    text-align: center;
+    transition-duration: $duration;
+    &::after {
+      font-family: FontAwesome;
+      content: "\f0c9";
+      position: absolute;
+      color: #525252;
+      margin-top: 30px;
+      top: 50%;
+      transform: rotate(90deg);
+      right: 1px;
+      font-size: 15px;
+      transition-duration: $duration;
+    }
+    &:hover {
+      &::after {
+        color: #fff;
+      }
+      background-color: #3d3c3c;
+    }
+  }
   &--header {
     padding: 20px 20px 0 20px;
     text-align: center;
@@ -312,6 +341,6 @@ body {
   left: -5%;
   top: -5%;
   width: 110%;
-  filter: blur(10px);
+  filter: blur(15px);
   z-index: -1;
 }

@@ -72,6 +72,38 @@ body {
   opacity: 0.8;
   padding-top: 70px;
 }
+.leftnav--btn {
+  display: block;
+  height: 100%;
+  width: 15px;
+  position: absolute;
+  background-color: #252525;
+  right: -15px;
+  bottom: 0px;
+  text-align: center;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.leftnav--btn::after {
+  font-family: FontAwesome;
+  content: "\f0c9";
+  position: absolute;
+  color: #525252;
+  margin-top: 30px;
+  top: 50%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  right: 1px;
+  font-size: 15px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.leftnav--btn:hover {
+  background-color: #3d3c3c;
+}
+.leftnav--btn:hover::after {
+  color: #fff;
+}
 .leftnav--header {
   padding: 20px 20px 0 20px;
   text-align: center;
@@ -356,7 +388,7 @@ body {
   left: -5%;
   top: -5%;
   width: 110%;
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
   z-index: -1;
 }

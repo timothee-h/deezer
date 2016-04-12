@@ -5,6 +5,7 @@ $( document ).ready(function() {
   });
   //music player
   $(function($) {
+    //play pause
     var play = false;
     $("#play").click(function() {
       if (play === true) {
@@ -12,24 +13,27 @@ $( document ).ready(function() {
       $('#play').addClass('footer--controller--icons3');
       $('#play').removeClass('footer--controller--icons6');
       play = false;
-    }
-    else {
-      $('#music1').trigger('play');
-      $('#play').addClass('footer--controller--icons6');
-      $('#play').removeClass('footer--controller--icons3');
-      play = true;
-    }
+      }
+      else {
+        $('#music1').trigger('play');
+        $('#play').addClass('footer--controller--icons6');
+        $('#play').removeClass('footer--controller--icons3');
+        play = true;
+      }
     });
+    // next
     $("#next").click(function() {
       $("#music1").prop("currentTime",$("#music1").prop("currentTime")+10);
     });
+    //previous
     $("#previous").click(function() {
       $("#music1").prop("currentTime",$("#music1").prop("currentTime")-10);
     });
+    // replay
     $("#replay").click(function() {
       $("#music1").prop("currentTime",0);
     });
-    //$('.audio').prop("volume", 0.1);
+    // progresion bar & counter
     var player = document.getElementById('music1');
     player.addEventListener("timeupdate", function() {
       var currentTime = player.currentTime;
@@ -44,5 +48,17 @@ $( document ).ready(function() {
       $('.footer--current--time').text(mins + ":" + secs);
       $('.footer--current--duration').text(minstt + ":" + secstt);
     });
+  });
+  //side bar
+  var visible = true;
+  $(".leftnav--btn").click(function() {
+    if (visible === true) {
+      $(".leftnav").animate({left: '-210px'});
+      visible = false;
+    }
+    else {
+      $(".leftnav").animate({left: '0px'});
+      visible = true;
+    }
   });
 });
