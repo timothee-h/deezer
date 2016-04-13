@@ -1,8 +1,4 @@
 $( document ).ready(function() {
-  // volume selector
-  $(function($) {
-    $(".knob").knob({});
-  });
   //music player
   $(function($) {
     //play pause
