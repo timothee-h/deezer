@@ -1,5 +1,9 @@
 @import "compass/reset";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@font-face {
+    font-family: 'deezer';
+    src: url('../fonts/UniversLTStd-UltraCn.otf') format('otf')
+}
 
 $bg-color: #23232c;
 $hover-color: rgb(24, 104, 205);
@@ -455,6 +459,66 @@ body {
     right: 0;
     &:focus {
       outline: none;
+    }
+  }
+}
+
+.loader{
+  width: 100%;
+  height: 100%;
+  background-color: #23232c;
+  position: fixed;
+  z-index: -3;
+  font: 16em/1 "helvetica";
+  &--svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 130px;
+    &--text--line {
+      font-size: .3em;
+        color: white;
+    }
+  }
+  &--txt {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 7% 28%;
+    stroke-width: 3px;
+    animation: stroke-offset 3s infinite linear;
+  }
+  &--txt:nth-child(1) {
+    stroke: #c0d63d;
+    stroke-dashoffset: 7%;
+  }
+  &--txt:nth-child(2) {
+    stroke: #d90e0e;
+    stroke-dashoffset: 14%;
+  }
+  &--txt:nth-child(3) {
+    stroke: #ffef1e;
+    stroke-dashoffset: 21%;
+  }
+  &--txt:nth-child(4) {
+    stroke: #ffffff;
+    stroke-dashoffset: 28%;
+  }
+  &--txt:nth-child(5) {
+    stroke: #35c7fb;
+    stroke-dashoffset: 35%;
+  }
+  @-webkit-keyframes stroke-offset {
+    50% {
+      stroke-dashoffset: 35%;
+      stroke-dasharray: 0 87.5%;
+    }
+  }
+
+  @keyframes stroke-offset {
+    50% {
+      stroke-dashoffset: 35%;
+      stroke-dasharray: 0 87.5%;
     }
   }
 }

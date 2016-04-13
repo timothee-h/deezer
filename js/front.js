@@ -113,7 +113,7 @@ $( document ).ready(function() {
       volumevisible = true;
     }
   });
-  //side bar
+  //reseatch bar
   var visiblesearch = false;
   $(".footer--search").click(function() {
     if (visiblesearch === true) {
@@ -125,5 +125,13 @@ $( document ).ready(function() {
       $(".search").animate({right: '0px'});
       visiblesearch = true;
     }
+  });
+  //loader
+  $(".site--container").hide();
+  $(window).load(function() {
+    setTimeout(function(){
+      $(".site--container").fadeIn();
+      $(".loader").delay(1000).fadeOut(600);
+    }, 2000);
   });
 });
