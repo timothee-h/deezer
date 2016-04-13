@@ -62,13 +62,16 @@
       <span class="footer--current--duration"></span>
     </div>
     <div class="footer--controller">
-      <span id="replay" class="footer--controller--icons1"></span>
+      <span id="alea" class="footer--controller--icons1"></span>
       <span id="previous" class="footer--controller--icons2"></span>
       <span id="play" class="footer--controller--icons3"></span>
       <span id="next" class="footer--controller--icons4"></span>
-      <span id="alea" class="footer--controller--icons5"></span>
-    </div>
-    <div class="footer--volume">
+      <span id="volume" class="footer--controller--icons5">
+        <span class="footer--controller--icons5--volume">
+          <span class="footer--controller--icons5--volume--progress"></span>
+          <span id="draggable" class="footer--controller--icons5--volume--handler"></span>
+        </span>
+      </span>
     </div>
     <div class="footer--search">
       <input type="text" class="footer--search--input" placeholder="Rechercher...">
@@ -80,6 +83,7 @@
   <audio id="music1" src="music/music1.mp3" preload="true"></audio>
   <!--Scripts-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/front.js"></script>
   <script type="text/javascript" src="js/back.js"></script>
   <noscript>Votre navigateur ne support pas le JavaScript !</noscript>

@@ -5,10 +5,10 @@ $( document ).ready(function() {
     var play = false;
     $("#play").click(function() {
       if (play === true) {
-      $('#music1').trigger('pause');
-      $('#play').addClass('footer--controller--icons3');
-      $('#play').removeClass('footer--controller--icons6');
-      play = false;
+        $('#music1').trigger('pause');
+        $('#play').addClass('footer--controller--icons3');
+        $('#play').removeClass('footer--controller--icons6');
+        play = false;
       }
       else {
         $('#music1').trigger('play');
@@ -89,6 +89,28 @@ $( document ).ready(function() {
       $(".leftnav--profil--tag--active").addClass('leftnav--profil--tag');
       $(".leftnav--profil--tag").removeClass('leftnav--profil--tag--active');
       light = false;
+    }
+  });
+  //volume controlleur
+  $("#music1").prop('volume', 0.8);
+  $( "#draggable" ).draggable({
+    axis: "x",
+    containment: "parent",
+    drag: function( event, ui ) {
+      var cursorPos = $(this).position().left;
+      $(".footer--controller--icons5--volume--progress").css({width: cursorPos+5 + 'px'});
+      $("#music1").prop('volume', cursorPos/100);
+    }
+  });
+  var volumevisible = false;
+  $("#volume").click(function() {
+    if (volumevisible === true) {
+      $(".footer--controller--icons5--volume").fadeOut(100);
+      volumevisible = false;
+    }
+    else {
+      $(".footer--controller--icons5--volume").fadeIn(100);
+      volumevisible = true;
     }
   });
 });

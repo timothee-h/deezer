@@ -354,7 +354,7 @@ body {
       }
     }
     &--icons1::before {
-      content: "\f01e";
+      content: "\f074";
     }
     &--icons2::before {
       content: "\f04a";
@@ -366,17 +366,39 @@ body {
       content: "\f04e";
     }
     &--icons5::before {
-      content: "\f074";
+      content: "\f028";
     }
     &--icons6::before {
       content: "\f04c";
     }
-  }
-  &--volume {
-    position: absolute;
-    left: 65%;
-    bottom: 2px;
-    height: 50px;
+    &--icons5 {
+      position: relative;
+      &--volume {
+        display: none;
+        background-color: $color;
+        height: 2px;
+        width: 100px;
+        position: absolute;
+        top: 9px;
+        left: 30px;
+        &--progress {
+          height: 100%;
+          background-color: $hover-color;
+          position: absolute;
+          top: 0;
+          width: 80px;
+        }
+        &--handler {
+          position: absolute;
+          bottom: -4px;
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background-color: #807d7d;
+          left: 80px;
+        }
+      }
+    }
   }
   &--search {
     position: absolute;
