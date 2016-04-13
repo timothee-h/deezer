@@ -46,15 +46,15 @@ $( document ).ready(function() {
     });
   });
   //side bar
-  var visible = true;
+  var visiblenav = true;
   $(".leftnav--btn").click(function() {
-    if (visible === true) {
+    if (visiblenav === true) {
       $(".leftnav").animate({left: '-210px'});
-      visible = false;
+      visiblenav = false;
     }
     else {
       $(".leftnav").animate({left: '0px'});
-      visible = true;
+      visiblenav = true;
     }
   });
   //night shift
@@ -111,6 +111,19 @@ $( document ).ready(function() {
     else {
       $(".footer--controller--icons5--volume").fadeIn(100);
       volumevisible = true;
+    }
+  });
+  //side bar
+  var visiblesearch = false;
+  $(".footer--search").click(function() {
+    if (visiblesearch === true) {
+      $(".search").animate({right: '-270px'});
+      $(".search").focus();
+      visiblesearch = false;
+    }
+    else {
+      $(".search").animate({right: '0px'});
+      visiblesearch = true;
     }
   });
 });

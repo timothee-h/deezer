@@ -402,18 +402,16 @@ body {
   }
   &--search {
     position: absolute;
-    top: 22px;
-    right: 8px;
-    &--input {
-      position: relative;
-      margin-right: 20px;
-      border-radius: 10px;
-      border: none;
-      padding: 5px 15px;
-      &:focus {
-        outline: none;
-        color: #393939;
-      }
+    top: 25px;
+    right: 30px;
+    &::after {
+      content: '\f002';
+      font-family: FontAwesome;
+      color: $color;
+      font-size: 18px;
+    }
+    &:hover::after {
+      color: $hover-color;
     }
   }
 }
@@ -431,6 +429,35 @@ body {
   z-index: -1;
 }
 
+.search {
+  width: 270px;
+  background-color: $color;
+  height: 100%;
+  position: fixed;
+  bottom: 74px;
+  opacity: $opacity;
+  padding-top: 70px;
+  right: -270px;
+  &--content {
+    height: 100%;
+    padding: 10px 10px 0 10px;
+    bottom: 50px;
+    position: relative;
+  }
+  &--input {
+    background-color: #f5f1f1;
+    border: none;
+    position: absolute;
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 16px;
+    bottom: 0;
+    right: 0;
+    &:focus {
+      outline: none;
+    }
+  }
+}
 /*==============================*\
 
   #Content
