@@ -10,12 +10,16 @@ $hover-color: rgb(24, 104, 205);
 $color: lightgray;
 $opacity: 0.8;
 $duration: 0.3s;
-
+$margin-top: 2%;
+$like-color: #e74c3c;
 * {box-sizing: border-box}
 
-body {
+.body {
   font-family: 'Open Sans', sans-serif;
+  padding-bottom:20%;
 }
+
+
 
 .leftnav {
   width: 210px;
@@ -25,6 +29,7 @@ body {
   bottom: 74px;
   opacity: $opacity;
   padding-top: 70px;
+  z-index: 1;
   &--night {
     display: inline-block;
     height: 20px;
@@ -517,6 +522,7 @@ body {
 }
 
 .search {
+  z-index:1;
   width: 270px;
   background-color: $color;
   height: 100%;
@@ -618,3 +624,335 @@ body {
   #Content
 
 \*==============================*/
+.accueil {
+    // ACCUEIL 
+    height: 100%;
+    width: 100%;
+    background-color: none;
+    position: relative;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    &--flow {
+      margin-top: $margin-top;
+      height: 300px;
+      background: url(http://i45.tinypic.com/312z4tg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 50;
+      &--flowLogo {
+        height: 30px;
+        width: 80px;
+        margin: auto;
+        margin-top: 10%;
+        color: $color;
+        background-color: $bg-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+      }
+      &--darkBox {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        background-color: $bg-color;
+        opacity: 0.9;
+      }
+      &--playButton {
+        width: 80px;
+        font-family: FontAwesome;
+        text-decoration: none;
+        color: $color;
+        font-size: 6em;
+        display: block;
+        margin: auto;
+        transition: color 0.5s ease-in-out;
+        &::before {
+          content: "\f01d ";
+        }
+        &:visited {
+          text-decoration: none;
+          color: $color;
+        }
+        &:link {
+          text-decoration: none;
+        }
+        &:hover {
+          text-decoration: none;
+          color: $hover-color;
+          transition: color 0.5s ease;
+          cursor: pointer;
+        }
+      }
+      &--title {
+        font-size: 20px;
+        color: $color;
+        text-align: center;
+      }
+    }
+    &--top10 {
+      overflow: hidden;
+      margin-top: $margin-top;
+      padding: 0;
+      padding-right: 0;
+      width: 100%;
+      color: $color;
+      &--header {
+        color: $color;
+        width: 100%;
+        background-color: transparentize($bg-color, 0.2);
+        padding: 5%;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+      &--container {
+        width: 100%;
+        height: 235px;
+        box-sizing: content-box;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: transparentize($bg-color, 0.3);
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+        &::-webkit-scrollbar-track {
+          background: $color;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $bg-color;
+        }
+        &--bloc {
+          width: 100%;
+          border-top: 1px solid $bg-color;
+          border-bottom: 1px solid $bg-color;
+          padding: 0;
+          &--number {
+            display: inline;
+            box-sizing: border-box;
+            font-weight: bold;
+            padding: 4%;
+            color: $color;
+          }
+          &--cover {
+            height: 50px;
+            width: 50px;
+            display: inline;
+            margin-right: 10px;
+          }
+          &--artist {
+            margin-right: 40px;
+          }
+          &--separator {
+            display: inline;
+          }
+          &--title {
+            font-weight: bold;
+          }
+          &--icons1,
+          &--icons2 {
+            display: inline;
+            font-family: FontAwesome;
+            margin-right: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: color 0.5s ease;
+            &:hover {
+              color: lighten($hover-color, 10%);
+              transition: color 0.5s ease;
+            }
+          }
+          &--icons1::before {
+            content: "\f04b";
+          }
+          &--icons2::before {
+            content: "\f067";
+          }
+          &--icons3 {
+            display: inline;
+            font-family: FontAwesome;
+            margin-right: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: color 0.5s ease;
+            &:hover {
+              color: lighten($like-color, 10%);
+              transition: color 0.5s ease;
+            }
+            &::before {
+              content: "\f004";
+            }
+          }
+        }
+      }
+    }
+    &--coupDeCoeur {
+      background-color: transparentize($bg-color, 0.4);
+      width: 100%;
+      margin-top: $margin-top;
+      padding-bottom: 5px;
+      &--title {
+        padding: 2%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color;
+        letter-spacing: 2px;
+        &--icons1 {
+          font-family: FontAwesome;
+          &::before {
+            content: "\f004";
+          }
+        }
+      }
+    }
+    &--mixFavoris {
+      background-color: transparentize($bg-color, 0.4);
+      width: 100%;
+      margin-top: $margin-top;
+      padding-bottom: 5px;
+      &--title {
+        padding: 2%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color;
+        letter-spacing: 2px;
+        &--icons1 {
+          font-family: FontAwesome;
+          &::before {
+            content: "\f21e";
+          }
+        }
+      }
+    }
+    &--suggestions {
+      background-color: transparentize($bg-color, 0.4);
+      width: 100%;
+      margin-top: $margin-top;
+      padding-bottom: 5px;
+      &--title {
+        padding: 2%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color;
+        letter-spacing: 2px;
+        &--icons1 {
+          font-family: FontAwesome;
+          &::before {
+            content: "\f0e7 ";
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+
+/*==============================*\
+
+  #SLIDER
+
+\*==============================*/
+  
+  .jssor_1 {
+    position: relative;
+    top: 0px;
+    left: -10px;
+    width: 800px;
+    height: 180px;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  
+  .slides {
+    cursor: default;
+    position: relative;
+    top: 0px;
+    left: -10px;
+    width: 800px;
+    height: 180px;
+  }
+  
+  .jssorb03 {
+    position: absolute;
+  }
+  
+  .jssorb03 div,
+  .jssorb03 div:hover,
+  .jssorb03 .av {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    line-height: 21px;
+    color: white;
+    font-size: 12px;
+    background: url('img/b03.png') no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .jssorb03 div {
+    background-position: -5px -4px;
+  }
+  
+  .jssorb03 div:hover,
+  .jssorb03 .av:hover {
+    background-position: -35px -4px;
+  }
+  
+  .jssorb03 .av {
+    background-position: -65px -4px;
+  }
+  
+  .jssorb03 .dn,
+  .jssorb03 .dn:hover {
+    background-position: -95px -4px;
+  }
+  
+  .jssora03l,
+  .jssora03r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url('img/a03.png') no-repeat;
+    overflow: hidden;
+  }
+  
+  .jssora03l {
+    top: 0px;
+    left: 8px;
+    width: 55px;
+    height: 55px;
+    z-index: 20;
+  }
+  
+  .jssora03r {
+    background-position: -63px -33px;
+    top: 0px;
+    right: 8px;
+    width: 55px;
+    height: 55px;
+  }
+  
+  .jssora03l:hover {
+    background-position: -123px -33px;
+  }
+  
+  .jssora03r:hover {
+    background-position: -183px -33px;
+  }
+  
+  .jssora03l.jssora03ldn {
+    background-position: -243px -33px;
+  }
+  
+  .jssora03r.jssora03rdn {
+    background-position: -303px -33px;
+  }

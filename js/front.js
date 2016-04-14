@@ -263,4 +263,60 @@ $( document ).ready(function() {
       $(".current").removeClass('current');
       $(this).addClass('current');
   });
+  
+  //slider
+  jQuery(document).ready(function ($) {
+
+    var jssor_1_options = {
+      $AutoPlay: true,
+      $AutoPlaySteps: 4,
+      $SlideDuration: 200,
+      $SlideWidth: 200,
+      $SlideSpacing: 3,
+      $Cols: 4,
+      $ArrowNavigatorOptions: {
+        $Class: $JssorArrowNavigator$,
+        $Steps: 4
+      },
+      $BulletNavigatorOptions: {
+        $Class: $JssorBulletNavigator$,
+        $SpacingX: 1,
+        $SpacingY: 1
+      }
+    };
+
+    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+    function ScaleSlider() {
+      var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+      if (refSize) {
+        refSize = Math.min(refSize, 1200);
+        jssor_1_slider.$ScaleWidth(refSize);
+      } else {
+        window.setTimeout(ScaleSlider, 30);
+      }
+    }
+    ScaleSlider();
+    $(window).bind("load", ScaleSlider);
+    $(window).bind("resize", ScaleSlider);
+    $(window).bind("orientationchange", ScaleSlider);
+
+  });
+  
+  //Disable Zoom
+  $(document).keydown(function (event) {
+    if (event.ctrlKey == true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109' || event.which == '187' || event.which == '189')) {
+      event.preventDefault();
+    }
+    // 107 Num Key  +
+    // 109 Num Key  -
+    // 173 Min Key  hyphen/underscor Hey
+    // 61 Plus key  +/= key
+  });
+
+  $(window).bind('mousewheel DOMMouseScroll', function (event) {
+    if (event.ctrlKey == true) {
+      event.preventDefault();
+    }
+  });
 });

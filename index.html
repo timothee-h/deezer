@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <title>Deezer</title>
-  <meta name="description" content=""/>
+  <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/jquery-ui.min.css">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
 </head>
 
-<body>
+<body class="body">
   <!--loader-->
   <div class="loader">
     <svg class="loader--svg" viewBox="0 0 800 600">
@@ -20,16 +23,11 @@
         </text>
       </symbol>
       <g class="g-ants">
-        <use xlink:href="#text"
-        class="loader--txt"></use>
-        <use xlink:href="#text"
-        class="loader--txt"></use>
-        <use xlink:href="#text"
-        class="loader--txt"></use>
-        <use xlink:href="#text"
-        class="loader--txt"></use>
-        <use xlink:href="#text"
-        class="loader--txt"></use>
+        <use xlink:href="#text" class="loader--txt"></use>
+        <use xlink:href="#text" class="loader--txt"></use>
+        <use xlink:href="#text" class="loader--txt"></use>
+        <use xlink:href="#text" class="loader--txt"></use>
+        <use xlink:href="#text" class="loader--txt"></use>
       </g>
     </svg>
   </div>
@@ -60,12 +58,24 @@
       </div>
       <div class="leftnav--secondary">
         <ul>
-          <li><a class="leftnav--secondary--1" href="#" title="Coups de coeur"></a></li>
-          <li><a class="leftnav--secondary--2" href="#" title="Playlists"></a></li>
-          <li><a class="leftnav--secondary--3" href="#" title="Albums"></a></li>
-          <li><a class="leftnav--secondary--4" href="#" title="Podcasts"></a></li>
-          <li><a class="leftnav--secondary--5" href="#" title="Applications"></a></li>
-          <li><a class="leftnav--secondary--6" href="#" title="paramètres"></a></li>
+          <li>
+            <a class="leftnav--secondary--1" href="#" title="Coups de coeur"></a>
+          </li>
+          <li>
+            <a class="leftnav--secondary--2" href="#" title="Playlists"></a>
+          </li>
+          <li>
+            <a class="leftnav--secondary--3" href="#" title="Albums"></a>
+          </li>
+          <li>
+            <a class="leftnav--secondary--4" href="#" title="Podcasts"></a>
+          </li>
+          <li>
+            <a class="leftnav--secondary--5" href="#" title="Applications"></a>
+          </li>
+          <li>
+            <a class="leftnav--secondary--6" href="#" title="paramètres"></a>
+          </li>
         </ul>
       </div>
       <div class="leftnav--profil">
@@ -138,8 +148,8 @@
         <span id="volume" class="footer--controller--icons5">
           <span class="footer--controller--icons5--volume">
             <span class="footer--controller--icons5--volume--progress"></span>
-            <span id="draggable" class="footer--controller--icons5--volume--handler"></span>
-          </span>
+        <span id="draggable" class="footer--controller--icons5--volume--handler"></span>
+        </span>
         </span>
       </div>
       <div class="footer--search">
@@ -154,7 +164,7 @@
         <h3>Artiste</h3>
         <hr>
         <div class="search--content--artiste"></div>
-        <h3 >Album</h3>
+        <h3>Album</h3>
         <hr>
         <div class="search--content--album"></div>
       </div>
@@ -166,7 +176,350 @@
     <!--=========content==========-->
     <!--==========================-->
     <div class="content">
+      <div class="accueil container">
+        <div class="row">
+          <div class="accueil--flow col-md-7">
+            <div class="accueil--flow--darkBox">
+              <div class="accueil--flow--flowLogo">Flow</div>
+              <a href="#" class="accueil--flow--playButton"></a>
+              <p class="accueil--flow--title">Un mix basé sur vos favoris</p>
+            </div>
+          </div>
 
+          <div class="accueil--top10 col-md-5">
+            <h2 class="accueil--top10--header">Top 9 des écoutes</h2>
+            <div class="accueil--top10--container">
+
+
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">1</p>
+                <img src="img/covers/cover2.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">2</p>
+                <img src="img/covers/cover3.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">3</p>
+                <img src="img/covers/cover4.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">4</p>
+                <img src="img/covers/cover5.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">5</p>
+                <img src="img/covers/cover6.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">6</p>
+                <img src="img/covers/cover7.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">7</p>
+                <img src="img/covers/cover8.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">9</p>
+                <img src="img/covers/cover9.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="accueil--coupDeCoeur col-md-12">
+            <h2 class="accueil--coupDeCoeur--title"><span class="accueil--coupDeCoeur--title--icons1"></span>
+        Mes coups de coeur</h2>
+            <div id="jssor_1" class="jssor_1">
+              <div data-u="slides" class="slides">
+                <div style="" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/beatles.jpg" class="" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/cover-big1.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/cover-big2.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/cover-big3.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/cover-big4.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/cover-big5.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/cover-big6.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/covers/cover1.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/covers/cover2.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/covers/cover3.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/covers/cover4.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/covers/cover5.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/covers/cover6.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/covers/cover7.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/covers/cover8.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/covers/cover9.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--coupDeCoeur--cover">
+
+                  <img data-u="image" src="img/covers/cover10.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="accueil--mixFavoris col-md-12">
+            <h2 class="accueil--mixFavoris--title"><span class="accueil--mixFavoris--title--icons1"></span>
+        Mix Favoris</h2>
+            <div id="jssor_1" class="jssor_1">
+              <div data-u="slides" class="slides">
+                <div style="" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/beatles.jpg" class="" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/cover-big1.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/cover-big2.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/cover-big3.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/cover-big4.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/cover-big5.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/cover-big6.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/covers/cover1.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/covers/cover2.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/covers/cover3.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/covers/cover4.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/covers/cover5.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/covers/cover6.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/covers/cover7.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/covers/cover8.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/covers/cover9.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--mixFavoris--cover">
+
+                  <img data-u="image" src="img/covers/cover10.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="accueil--suggestions col-md-12">
+            <h2 class="accueil--suggestions--title"><span class="accueil--suggestions--title--icons1">Suggestions</span>
+        </h2>
+            <div id="jssor_1" class="jssor_1">
+              <div data-u="slides" class="slides">
+                <div style="" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/beatles.jpg" class="" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/cover-big1.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/cover-big2.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/cover-big3.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/cover-big4.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/cover-big5.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/cover-big6.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/covers/cover1.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/covers/cover2.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/covers/cover3.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/covers/cover4.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/covers/cover5.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/covers/cover6.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/covers/cover7.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/covers/cover8.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/covers/cover9.jpg" />
+                </div>
+                <div style="display: none;" class="accueil--suggestions--cover">
+
+                  <img data-u="image" src="img/covers/cover10.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!--music-->
@@ -182,4 +535,5 @@
   <script type="text/javascript" src="js/deezer.js"></script>
   <noscript>Votre navigateur ne support pas le JavaScript !</noscript>
 </body>
+
 </html>
