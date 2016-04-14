@@ -1001,3 +1001,206 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .jssora03r.jssora03rdn {
   background-position: -303px -33px;
 }
+
+/*==============================*\
+
+  #log page
+
+\*==============================*/
+.log {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  z-index: 5;
+  background-color: black;
+  background-image: url("../img/back.jpeg");
+  background-attachment: fixed;
+  font-family: 'Open Sans', sans-serif;
+  background-size: 100%;
+  font-size: 12px;
+}
+.log--clearBoth {
+  clear: both;
+}
+.log h1 {
+  font-size: 40px;
+  color: white;
+}
+.log h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #ea142b;
+}
+.log h3 {
+  font-size: 25px;
+  color: #f8987e;
+}
+.log--presa p {
+  font-size: 15px;
+  color: white;
+}
+.log--title {
+  margin: auto;
+  width: 900px;
+  text-align: center;
+  float: inherit;
+}
+.log--inscription {
+  float: right;
+  width: 200px;
+  margin-right: 50px;
+  margin-top: 30px;
+}
+.log--inscription button {
+  width: 200px;
+  color: white;
+  background-color: #951926;
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 1px;
+  border: none;
+  border-radius: 4px;
+}
+.log--logo {
+  height: 100px;
+  width: auto;
+  margin-left: 40px;
+  float: left;
+}
+.log--connect {
+  margin: auto;
+  margin-top: 80px;
+  width: 300px;
+  text-align: center;
+}
+.log--connect p {
+  color: #ffffff;
+}
+.log label {
+  width: 150px;
+  display: block;
+}
+.log #log--pass {
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 4px;
+  border: none;
+  border: 1px solid #ececec;
+}
+.log #log--pseudo {
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 4px;
+  border: none;
+  border: 1px solid #ececec;
+}
+.log #log--button {
+  width: 277px;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  background-color: #1868cd;
+  padding: 14px;
+  font-size: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+}
+.log #log--button:hover {
+  background-color: #1c4b73;
+}
+.log--presa {
+  margin-top: 330px;
+  width: 100%;
+  height: 560px;
+  background-color: #202020;
+}
+.log--speech {
+  width: 400px;
+  margin-left: 100px;
+  float: left;
+}
+.log--speech--title {
+  margin-top: 50px;
+}
+.log--iphone {
+  opacity: 0.5;
+  width: 450px;
+  float: right;
+  -webkit-transition-delay: 1s;
+  /* Safari */
+  -webkit-transition-delay: 0s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.log--iphone:hover {
+  opacity: 1;
+  float: right;
+  margin-right: 50px;
+}
+.log--artistes {
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+}
+.log--artistes p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: white;
+}
+.log--artistes h2 {
+  color: #337c89;
+}
+.log--artistes h3 {
+  color: #8ebfd0;
+}
+.log--cover {
+  width: 550px;
+  margin-left: 50px;
+  opacity: 0.85;
+  float: left;
+}
+.log--cover:hover {
+  -webkit-transition-delay: 1s;
+  /* Safari */
+  -webkit-transition-delay: 0s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  opacity: 1;
+}
+.log--speech2 {
+  float: right;
+  width: 400px;
+  text-align: right;
+  margin-right: 100px;
+}
+.log--speech2--title {
+  margin-top: 100px;
+}
+.log--famille {
+  width: 100%;
+  height: 560px;
+  background-color: white;
+}
+.log--famille p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: black;
+}
+.log--famille h2 {
+  color: #bfd53d;
+}
+.log--famille h3 {
+  color: #dce69c;
+}
+.log--speech3 {
+  width: 400px;
+  margin-left: 100px;
+  float: left;
+}
+.log--speech3--title {
+  margin-top: 50px;
+}

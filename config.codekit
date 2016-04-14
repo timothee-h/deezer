@@ -11,13 +11,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/img\/beatles.jpg": {
+	"\/img\/back.jpeg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 395736,
-		"inputAbbreviatedPath": "\/img\/beatles.jpg",
-		"outputAbbreviatedPath": "\/img\/beatles.jpg",
+		"initialSize": 4.27199e+06,
+		"inputAbbreviatedPath": "\/img\/back.jpeg",
+		"outputAbbreviatedPath": "\/img\/back.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -84,6 +84,17 @@
 		"initialSize": 74540,
 		"inputAbbreviatedPath": "\/img\/cover-big6.jpg",
 		"outputAbbreviatedPath": "\/img\/cover-big6.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cover.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 100180,
+		"inputAbbreviatedPath": "\/img\/cover.jpg",
+		"outputAbbreviatedPath": "\/img\/cover.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -209,13 +220,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/darkside.jpg": {
+	"\/img\/iphone.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 260514,
+		"inputAbbreviatedPath": "\/img\/iphone.png",
+		"outputAbbreviatedPath": "\/img\/iphone.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/jackson.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 37152,
-		"inputAbbreviatedPath": "\/img\/darkside.jpg",
-		"outputAbbreviatedPath": "\/img\/darkside.jpg",
+		"initialSize": 1.36853e+06,
+		"inputAbbreviatedPath": "\/img\/jackson.jpg",
+		"outputAbbreviatedPath": "\/img\/jackson.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -238,6 +260,28 @@
 		"initialSize": 3831,
 		"inputAbbreviatedPath": "\/img\/logo.png",
 		"outputAbbreviatedPath": "\/img\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/logo2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5276,
+		"inputAbbreviatedPath": "\/img\/logo2.png",
+		"outputAbbreviatedPath": "\/img\/logo2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/note.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 29815,
+		"inputAbbreviatedPath": "\/img\/note.png",
+		"outputAbbreviatedPath": "\/img\/note.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
