@@ -1,0 +1,50 @@
+var music = [
+  {
+    "srcMusic" : "music/got-you.mp3",
+    "imgMusic" : "music/img-got-you.jpg",
+    "artiste" : "Duke Dumont",
+    "musicName" : "I got you"
+  },
+  {
+    "srcMusic" : "music/get-lucky.mp3",
+    "imgMusic" : "music/img-get-lucky.jpg",
+    "artiste" : "Daft Punk",
+    "musicName" : "Get lucky"
+  },
+  {
+    "srcMusic" : "music/ma-dope.mp3",
+    "imgMusic" : "music/img-ma-dope.jpg",
+    "artiste" : "NekFeu",
+    "musicName" : "Ma dope"
+  },
+  {
+    "srcMusic" : "music/champ-elysee.mp3",
+    "imgMusic" : "music/img-champ-elysee.jpg",
+    "artiste" : "SCH",
+    "musicName" : "Champ elysee"
+  },
+  {
+    "srcMusic" : "music/headlight.mp3",
+    "imgMusic" : "music/img-headlight.jpg",
+    "artiste" : "Robin Schulz",
+    "musicName" : "Headlight"
+  },
+  {
+    "srcMusic" : "music/92i.mp3",
+    "imgMusic" : "music/img-92i.jpg",
+    "artiste" : "Booba",
+    "musicName" : "92i"
+  },
+  {
+    "srcMusic" : "music/ocean-drive.mp3",
+    "imgMusic" : "music/img-ocean-drive.jpg",
+    "artiste" : "Duke Dumont",
+    "musicName" : "Ocean drive"
+  },
+  {
+    "srcMusic" : "music/sugar.mp3",
+    "imgMusic" : "music/img-sugar.jpg",
+    "artiste" : "Maroon 5",
+    "musicName" : "Sugar"
+  }
+];

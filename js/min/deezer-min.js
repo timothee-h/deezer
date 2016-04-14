@@ -1,0 +1,1 @@
+DZ.init({appId:"YOUR_APP_ID",channelUrl:"http://YOUR_DOMAIN/channel.html"}),DZ.ready(function(n){console.log("DZ SDK is ready",n)}),DZ.api("search?q=a",function(n){for(var a=0;10>a;a++);});

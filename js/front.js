@@ -1,8 +1,18 @@
 $( document ).ready(function() {
+  var largeurF = $(window).width();
+  $(window).resize(function(){
+    largeurF = $(window).width();
+  });
   //music player
   $(function($) {
     //play pause
+    var i = 0;
     var play = false;
+    $("#music1").attr("src", music[i]['srcMusic']);
+    $(".footer--current--img").attr("src", music[i]['imgMusic']);
+    $(".background").css({backgroundImage: 'url('+  music[i]['imgMusic']+  ')'});
+    $(".footer--current--title").html(music[i]['musicName']);
+    $(".footer--current--artist").html(music[i]['artiste']);
     $("#play").click(function() {
       if (play === true) {
         $('#music1').trigger('pause');
@@ -19,21 +29,52 @@ $( document ).ready(function() {
     });
     // next
     $("#next").click(function() {
-      $("#music1").prop("currentTime",$("#music1").prop("currentTime")+10);
+      i = (i + 1)%8;
+      $("#music1").attr("src", music[i]['srcMusic']);
+      $(".footer--current--img").attr("src", music[i]['imgMusic']);
+      $(".background").css({backgroundImage: 'url('+  music[i]['imgMusic']+  ')'});
+      $(".footer--current--title").html(music[i]['musicName']);
+      $(".footer--current--artist").html(music[i]['artiste']);
+      $('#music1').trigger('play');
     });
     //previous
     $("#previous").click(function() {
-      $("#music1").prop("currentTime",$("#music1").prop("currentTime")-10);
+      if (i === 0) {
+        i = 8;
+      }
+      i = (i - 1)%8;
+      $("#music1").attr("src", music[i]['srcMusic']);
+      $(".footer--current--img").attr("src", music[i]['imgMusic']);
+      $(".background").css({backgroundImage: 'url('+  music[i]['imgMusic']+  ')'});
+      $(".footer--current--title").html(music[i]['musicName']);
+      $(".footer--current--artist").html(music[i]['artiste']);
+      $('#music1').trigger('play');
     });
     // replay
-    $("#replay").click(function() {
-      $("#music1").prop("currentTime",0);
+    $("#alea").click(function() {
+      i = Math.floor(Math.random()*8);
+      $("#music1").attr("src", music[i]['srcMusic']);
+      $(".footer--current--img").attr("src", music[i]['imgMusic']);
+      $(".background").css({backgroundImage: 'url('+  music[i]['imgMusic']+  ')'});
+      $(".footer--current--title").html(music[i]['musicName']);
+      $(".footer--current--artist").html(music[i]['artiste']);
+      $('#music1').trigger('play');
+    });
+    // loop
+    $('#music1').bind("ended", function(){
+      i = (i + 1)%8;
+      $("#music1").attr("src", music[i]['srcMusic']);
+      $(".footer--current--img").attr("src", music[i]['imgMusic']);
+      $(".background").css({backgroundImage: 'url('+  music[i]['imgMusic']+  ')'});
+      $(".footer--current--title").html(music[i]['musicName']);
+      $(".footer--current--artist").html(music[i]['artiste']);
+      $('#music1').trigger('play');
     });
     // progresion bar & counter
     var player = document.getElementById('music1');
     player.addEventListener("timeupdate", function() {
       var currentTime = player.currentTime;
-      var duration = player.duration;
+      duration = player.duration;
       var mins  = Math.floor((currentTime % 3600) / 60);
       var secs  = Math.floor(currentTime % 60);
       var minstt  = Math.floor((duration % 3600) / 60);
@@ -43,6 +84,12 @@ $( document ).ready(function() {
       $('.footer--player--progress').animate({'width':(currentTime + 0.25)/duration*100+'%'},250,'linear');
       $('.footer--current--time').text(mins + ":" + secs);
       $('.footer--current--duration').text(minstt + ":" + secstt);
+    });
+    $(".footer--player").click(function(e){
+      posX = e.pageX;
+      player.currentTime = (posX/largeurF) * duration;
+      console.log(e.pageX);
+      console.log((posX/largeurF) * duration);
     });
   });
   //side bar

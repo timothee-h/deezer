@@ -347,13 +347,15 @@ body {
     transition-duration: $duration;
     &--progress {
       opacity: 1;
-      content: '';
       display: block;
-      height: 4px;
+      height: 100%;
       position: absolute;
-      bottom: 70px;
+      top: 0;
       background-color: $hover-color;
       width: 0;
+    }
+    &:hover {
+      height: 7px;
     }
   }
   &--current {
@@ -500,7 +502,9 @@ body {
 }
 
 .background {
-  background: url('../img/beatles.jpg') no-repeat center center;
+  background-image: url('../img/beatles.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;;
   background-size: cover;
   position: fixed;
   height: 110%;
