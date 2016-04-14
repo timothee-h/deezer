@@ -526,10 +526,16 @@ body {
   padding-top: 70px;
   right: -270px;
   &--content {
+    top: 10px;
     height: 100%;
     padding: 10px 10px 0 10px;
     bottom: 50px;
     position: relative;
+    &--titre,
+    &--album,
+    &--artiste {
+      margin-bottom: 20px;
+    }
   }
   &--input {
     background-color: #f5f1f1;

@@ -88,8 +88,6 @@ $( document ).ready(function() {
     $(".footer--player").click(function(e){
       posX = e.pageX;
       player.currentTime = (posX/largeurF) * duration;
-      console.log(e.pageX);
-      console.log((posX/largeurF) * duration);
     });
   });
   //side bar
