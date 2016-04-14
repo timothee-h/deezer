@@ -127,6 +127,7 @@ body {
   right: -15px;
   bottom: 0px;
   text-align: center;
+  cursor: pointer;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
@@ -158,14 +159,15 @@ body {
   margin-right: 20px;
   width: 120px;
 }
-.leftnav--primary ul {
+.leftnav--primary > ul {
   margin-top: 30px;
 }
-.leftnav--primary ul li {
+.leftnav--primary > ul li {
   height: 35px;
   width: 100%;
+  position: relative;
 }
-.leftnav--primary ul li a {
+.leftnav--primary > ul li a {
   font-size: 13px;
   text-transform: uppercase;
   display: block;
@@ -179,18 +181,32 @@ body {
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
 }
-.leftnav--primary ul li a:hover {
+.leftnav--primary > ul li a:hover {
   background-color: #1f1f28;
   border-left: 2px solid #1868cd;
   color: #fff;
 }
-.leftnav--primary ul li #current {
+.leftnav--primary > ul li #sub-btn::after {
+  font-family: FontAwesome;
+  content: '\f107';
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  right: 80px;
+  color: lightgray;
+}
+.leftnav--primary > ul li .current {
   background-color: #1f1f28;
   border-left: 2px solid #1868cd;
   color: #fff;
+}
+.leftnav--primary > ul li ul {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #2b2b2b;
 }
 .leftnav--secondary ul {
-  margin-top: 10px;
   height: 160px;
 }
 .leftnav--secondary ul li {
@@ -212,11 +228,14 @@ body {
   border: 1px solid #1f1f28;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+  -webkit-transition-property: color, background;
+  transition-property: color, background;
+  background-color: #23232c;
 }
 .leftnav--secondary ul li a:hover {
   background-color: #1f1f28;
   color: #fff;
-  border-bottom: 1px solid #1868cd;
+  border-bottom: 2px solid #1868cd;
 }
 .leftnav--secondary ul li a::before {
   font-family: FontAwesome;
@@ -249,8 +268,25 @@ body {
 .leftnav--secondary--6::before {
   content: "\f013";
 }
+.leftnav--secondary--1 {
+  margin-left: 1px;
+}
+.leftnav--secondary--3 {
+  margin-top: -1px;
+  margin-left: 1px;
+}
+.leftnav--secondary--4 {
+  margin-top: -1px;
+}
+.leftnav--secondary--5 {
+  margin-top: -2px;
+  margin-left: 1px;
+}
+.leftnav--secondary--6 {
+  margin-top: -2px;
+}
 .leftnav--profil {
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
 }
 .leftnav--profil--tag {
@@ -264,7 +300,7 @@ body {
   line-height: 33px;
   width: 100%;
   border-left: 2px solid rgba(24, 104, 205, 0);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .leftnav--profil--tag::before {
   font-family: FontAwesome;
@@ -289,7 +325,7 @@ body {
   line-height: 33px;
   width: 100%;
   border-left: 2px solid rgba(24, 104, 205, 0);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .leftnav--profil--tag--active::before {
   font-family: FontAwesome;
@@ -317,6 +353,28 @@ body {
   color: #fff;
   background-color: #0f4c99;
 }
+.leftnav--fav, .leftnav--playlist, .leftnav--album, .leftnav--podcast, .leftnav--app, .leftnav--config {
+  height: 100%;
+  position: absolute;
+  margin-bottom: 330%;
+  bottom: 0;
+  left: 225px;
+  width: 300px;
+  background-color: lightgray;
+}
+.leftnav--fav--header, .leftnav--playlist--header, .leftnav--album--header, .leftnav--podcast--header, .leftnav--app--header, .leftnav--config--header {
+  margin-top: 75px;
+  background-color: #ececec;
+  padding: 20px 20px;
+}
+.leftnav--fav--header i, .leftnav--playlist--header i, .leftnav--album--header i, .leftnav--podcast--header i, .leftnav--app--header i, .leftnav--config--header i {
+  float: right;
+  position: relative;
+  bottom: 19px;
+  color: #2b2b2b;
+  font-size: 20px;
+  cursor: pointer;
+}
 
 .footer {
   background-color: #23232c;
@@ -325,6 +383,7 @@ body {
   height: 70px;
   position: fixed;
   bottom: 0;
+  z-index: 2;
 }
 .footer--player {
   height: 4px;
@@ -469,6 +528,20 @@ body {
 .footer--search:hover::after {
   color: #1868cd;
 }
+.footer--search--night {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}
+.footer--search--night::after {
+  content: '\f002';
+  font-family: FontAwesome;
+  color: #23232c;
+  font-size: 18px;
+}
+.footer--search--night:hover::after {
+  color: #1868cd;
+}
 
 .background {
   background: url("../img/beatles.jpg") no-repeat center center;
@@ -538,8 +611,8 @@ body {
   stroke: white;
   stroke-dasharray: 7% 28%;
   stroke-width: 3px;
-  -webkit-animation: stroke-offset 3s infinite linear;
-          animation: stroke-offset 3s infinite linear;
+  -webkit-animation: stroke-offset 2.5s infinite linear;
+          animation: stroke-offset 2.5s infinite linear;
 }
 .loader--txt:nth-child(1) {
   stroke: #c0d63d;

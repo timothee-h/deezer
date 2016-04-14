@@ -46,15 +46,14 @@ $( document ).ready(function() {
     });
   });
   //side bar
-  var visiblenav = true;
   $(".leftnav--btn").click(function() {
-    if (visiblenav === true) {
-      $(".leftnav").animate({left: '-210px'});
-      visiblenav = false;
+    if ($(".leftnav").hasClass('visible')) {
+      $(".leftnav").animate({left: '0px'});
+      $(".leftnav").removeClass('visible');
     }
     else {
-      $(".leftnav").animate({left: '0px'});
-      visiblenav = true;
+      $(".leftnav").animate({left: '-210px'});
+      $(".leftnav").addClass('visible');
     }
   });
   //night shift
@@ -62,6 +61,7 @@ $( document ).ready(function() {
   $(".leftnav--night").click(function() {
     if (light === false) {
       $(".leftnav").css({backgroundColor: '#ececec'});
+      $(".leftnav--secondary a").css({borderColor: '#d1cdcd'});
       $(".footer").css({backgroundColor: '#ececec'});
       $(".leftnav--btn").css({backgroundColor: '#d1cdcd'});
       $("#current").css({backgroundColor: '#d1cdcd'});
@@ -74,20 +74,23 @@ $( document ).ready(function() {
       $(".leftnav--night--active").removeClass('leftnav--night');
       $(".leftnav--profil--tag").addClass('leftnav--profil--tag--active');
       $(".leftnav--profil--tag--active").removeClass('leftnav--profil--tag');
+      $(".footer--search").addClass('footer--search--night');
+      $(".footer--search--night").removeClass('footer--search');
       light = true;
     }
     else {
       $(".leftnav").css({backgroundColor: '#23232c'});
       $(".footer").css({backgroundColor: '#23232c'});
       $(".leftnav--btn").css({backgroundColor: '#1d1d20'});
+      $(".leftnav--secondary a").css({borderColor: '#1f1f28'});
       $("#current").css({backgroundColor: '#23232c'});
       $("a").css({color: '#ececec'});
       $("span").css({color: '#ececec'});
       $(".footer--player--progress").css({backgroundColor: 'rgb(24, 104, 205)'});
       $(".footer--player").css({backgroundColor: 'lightgray'});
       $(".leftnav--profil--abonne").css({backgroundColor: 'rgb(24, 104, 205)'});
-      $(".leftnav--profil--tag--active").addClass('leftnav--profil--tag');
-      $(".leftnav--profil--tag").removeClass('leftnav--profil--tag--active');
+      $(".footer--search--night").addClass('footer--search');
+      $(".footer--search").removeClass('footer--search--night');
       light = false;
     }
   });
@@ -114,16 +117,14 @@ $( document ).ready(function() {
     }
   });
   //reseatch bar
-  var visiblesearch = false;
   $(".footer--search").click(function() {
-    if (visiblesearch === true) {
+    if ($(".search").hasClass('visible')) {
       $(".search").animate({right: '-270px'});
-      $(".search").focus();
-      visiblesearch = false;
+      $(".search").removeClass('visible');
     }
     else {
       $(".search").animate({right: '0px'});
-      visiblesearch = true;
+      $(".search").addClass('visible');
     }
   });
   //loader
@@ -132,6 +133,89 @@ $( document ).ready(function() {
     setTimeout(function(){
       $(".site--container").fadeIn();
       $(".loader").delay(1000).fadeOut(600);
-    }, 2000);
+    }, 3000);
+  });
+  //icon app
+  $(".leftnav--secondary--1, .leftnav--fav--header--icon").click(function() {
+    if ($(".leftnav--fav").hasClass('visible')) {
+      $(".leftnav--fav").animate({marginBottom: '330%'});
+      $(".leftnav--fav").removeClass('visible');
+    }
+    else {
+      $(".leftnav--fav").animate({marginBottom: '0px'});
+      $(".leftnav--fav").addClass('visible');
+    }
+  });
+  //icon app
+  $(".leftnav--secondary--2, .leftnav--playlist--header--icon").click(function() {
+    if ($(".leftnav--playlist").hasClass('visible')) {
+      $(".leftnav--playlist").animate({marginBottom: '330%'});
+      $(".leftnav--playlist").removeClass('visible');
+    }
+    else {
+      $(".leftnav--playlist").animate({marginBottom: '0px'});
+      $(".leftnav--playlist").addClass('visible');
+    }
+  });
+  //icon app
+  $(".leftnav--secondary--3, .leftnav--album--header--icon").click(function() {
+    if ($(".leftnav--album").hasClass('visible')) {
+      $(".leftnav--album").animate({marginBottom: '330%'});
+      $(".leftnav--album").removeClass('visible');
+    }
+    else {
+      $(".leftnav--album").animate({marginBottom: '0px'});
+      $(".leftnav--album").addClass('visible');
+    }
+  });
+  //icon app
+  $(".leftnav--secondary--4, .leftnav--podcast--header--icon").click(function() {
+    if ($(".leftnav--podcast").hasClass('visible')) {
+      $(".leftnav--podcast").animate({marginBottom: '330%'});
+      $(".leftnav--podcast").removeClass('visible');
+    }
+    else {
+      $(".leftnav--podcast").animate({marginBottom: '0px'});
+      $(".leftnav--podcast").addClass('visible');
+    }
+  });
+  //icon app
+  $(".leftnav--secondary--5, .leftnav--app--header--icon").click(function() {
+    if ($(".leftnav--app").hasClass('visible')) {
+      $(".leftnav--app").animate({marginBottom: '330%'});
+      $(".leftnav--app").removeClass('visible');
+    }
+    else {
+      $(".leftnav--app").animate({marginBottom: '0px'});
+      $(".leftnav--app").addClass('visible');
+    }
+  });
+  //icon app
+  $(".leftnav--secondary--6, .leftnav--config--header--icon").click(function() {
+    if ($(".leftnav--config").hasClass('visible')) {
+      $(".leftnav--config").animate({marginBottom: '330%'});
+      $(".leftnav--config").removeClass('visible');
+    }
+    else {
+      $(".leftnav--config").animate({marginBottom: '0px'});
+      $(".leftnav--config").addClass('visible');
+    }
+  });
+  //Sub menu
+  $("#sub-btn").click(function() {
+    if ($(".leftnav--secondary ul").hasClass('visible')) {
+      $(".leftnav--secondary ul").animate({marginTop: '0px'});
+      $(".leftnav--secondary ul").removeClass('visible');
+    }
+    else {
+      $(".leftnav--secondary ul").animate({marginTop: '140px'});
+      $(".leftnav--secondary ul").addClass('visible');
+    }
+  });
+  //current menu
+  $(".leftnav--primary--yo:eq(0)").addClass('current');
+  $(".leftnav--primary--yo").click(function() {
+      $(".current").removeClass('current');
+      $(this).addClass('current');
   });
 });

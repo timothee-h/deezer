@@ -74,6 +74,7 @@ body {
     right: -15px;
     bottom: 0px;
     text-align: center;
+    cursor: pointer;
     transition-duration: $duration;
     &::after {
       font-family: FontAwesome;
@@ -105,11 +106,12 @@ body {
     }
   }
   &--primary {
-    ul {
+    > ul {
       margin-top: 30px;
       li {
         height: 35px;
         width: 100%;
+        position: relative;
         a {
           font-size: 13px;
           text-transform: uppercase;
@@ -128,17 +130,31 @@ body {
             color: #fff;
           }
         }
-        #current {
+        #sub-btn::after {
+          font-family: FontAwesome;
+          content: '\f107';
+          font-size: 16px;
+          position: absolute;
+          top: 0;
+          right: 80px;
+          color: $color;
+        }
+        .current {
           background-color: #1f1f28;
           border-left: 2px solid $hover-color;
           color: #fff;
+        }
+        ul {
+          position: relative;
+          display: block;
+          width: 100%;
+          background-color: #2b2b2b;
         }
       }
     }
   }
   &--secondary {
     ul {
-      margin-top: 10px;
       height: 160px;
       li {
         height: 50px;
@@ -157,10 +173,12 @@ body {
           position: relative;
           border: 1px solid #1f1f28;
           transition-duration: 0.3s;
+          transition-property: color, background;
+          background-color: $bg-color;
           &:hover {
             background-color: #1f1f28;
             color: #fff;
-            border-bottom: 1px solid $hover-color;
+            border-bottom: 2px solid $hover-color;
           }
           &::before {
             font-family: FontAwesome;
@@ -195,9 +213,26 @@ body {
     &--6::before {
       content: "\f013";
     }
+    &--1{
+      margin-left: 1px;
+    }
+    &--3{
+      margin-top: -1px;
+      margin-left: 1px;
+    }
+    &--4 {
+      margin-top: -1px;
+    }
+    &--5{
+      margin-top: -2px;
+      margin-left: 1px;
+    }
+    &--6 {
+      margin-top: -2px;
+    }
   }
   &--profil {
-    margin-top: 20px;
+    margin-top: 10px;
     position: relative;
     &--tag {
       position: relative;
@@ -210,7 +245,7 @@ body {
       line-height: 33px;
       width: 100%;
       border-left: 2px solid rgba(24, 104, 205, 0);
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       &::before {
         font-family: FontAwesome;
         content: "\f007";
@@ -235,7 +270,7 @@ body {
       line-height: 33px;
       width: 100%;
       border-left: 2px solid rgba(24, 104, 205, 0);
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       &::before {
         font-family: FontAwesome;
         content: "\f007";
@@ -264,6 +299,35 @@ body {
       }
     }
   }
+  &--fav,
+  &--playlist,
+  &--album,
+  &--podcast,
+  &--app,
+  &--config {
+    height: 100%;
+    position: absolute;
+    margin-bottom: 330%;
+    bottom: 0;
+    left: 225px;
+    width: 300px;
+    background-color: $color;
+    &--header {
+      margin-top: 75px;
+      background-color: #ececec;
+      padding: 20px 20px;
+      & i {
+        float: right;
+        position: relative;
+        bottom: 19px;
+        color: rgb(43, 43, 43);
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+    &--content {
+    }
+  }
 }
 
 .footer {
@@ -273,6 +337,7 @@ body {
   height: 70px;
   position: fixed;
   bottom: 0;
+  z-index: 2;
   &--player {
     height: 4px;
     width: 100%;
@@ -418,6 +483,20 @@ body {
       color: $hover-color;
     }
   }
+  &--search--night {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    &::after {
+      content: '\f002';
+      font-family: FontAwesome;
+      color: #23232c;
+      font-size: 18px;
+    }
+    &:hover::after {
+      color: $hover-color;
+    }
+  }
 }
 
 .background {
@@ -486,7 +565,7 @@ body {
     stroke: white;
     stroke-dasharray: 7% 28%;
     stroke-width: 3px;
-    animation: stroke-offset 3s infinite linear;
+    animation: stroke-offset 2.5s infinite linear;
   }
   &--txt:nth-child(1) {
     stroke: #c0d63d;
@@ -522,6 +601,8 @@ body {
     }
   }
 }
+
+
 /*==============================*\
 
   #Content
