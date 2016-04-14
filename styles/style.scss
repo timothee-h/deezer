@@ -8,7 +8,7 @@
 $bg-color: #23232c;
 $hover-color: rgb(24, 104, 205);
 $color: lightgray;
-$opacity: 0.8;
+$opacity: 0.9;
 $duration: 0.3s;
 $margin-top: 2%;
 $like-color: #e74c3c;
@@ -413,7 +413,7 @@ $like-color: #e74c3c;
       color: $color;
       display: inline-block;
       text-decoration: none;
-      margin: 25px 20px 0 20px;
+      margin: 20px 20px 0 20px;
       font-size: 20px;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -455,7 +455,7 @@ $like-color: #e74c3c;
         height: 2px;
         width: 100px;
         position: absolute;
-        top: 9px;
+        top: 13px;
         left: 30px;
         &--progress {
           height: 100%;
@@ -478,7 +478,7 @@ $like-color: #e74c3c;
   }
   &--search {
     position: absolute;
-    top: 25px;
+    top: 24px;
     right: 30px;
     &::after {
       content: '\f002';
@@ -537,6 +537,9 @@ $like-color: #e74c3c;
     padding: 10px 10px 0 10px;
     bottom: 50px;
     position: relative;
+    hr {
+      margin-top: 0;
+    }
     &--titre,
     &--album,
     &--artiste {
@@ -625,7 +628,7 @@ $like-color: #e74c3c;
 
 \*==============================*/
 .accueil {
-    // ACCUEIL 
+    // ACCUEIL
     height: 100%;
     width: 100%;
     background-color: none;
@@ -856,8 +859,10 @@ $like-color: #e74c3c;
   #SLIDER
 
 \*==============================*/
-  
-  .jssor_1 {
+
+  .jssor_1,
+  .jssor_2,
+  .jssor_3 {
     position: relative;
     top: 0px;
     left: -10px;
@@ -866,7 +871,7 @@ $like-color: #e74c3c;
     overflow: hidden;
     visibility: hidden;
   }
-  
+
   .slides {
     cursor: default;
     position: relative;
@@ -875,11 +880,11 @@ $like-color: #e74c3c;
     width: 800px;
     height: 180px;
   }
-  
+
   .jssorb03 {
     position: absolute;
   }
-  
+
   .jssorb03 div,
   .jssorb03 div:hover,
   .jssorb03 .av {
@@ -894,25 +899,25 @@ $like-color: #e74c3c;
     overflow: hidden;
     cursor: pointer;
   }
-  
+
   .jssorb03 div {
     background-position: -5px -4px;
   }
-  
+
   .jssorb03 div:hover,
   .jssorb03 .av:hover {
     background-position: -35px -4px;
   }
-  
+
   .jssorb03 .av {
     background-position: -65px -4px;
   }
-  
+
   .jssorb03 .dn,
   .jssorb03 .dn:hover {
     background-position: -95px -4px;
   }
-  
+
   .jssora03l,
   .jssora03r {
     display: block;
@@ -924,7 +929,7 @@ $like-color: #e74c3c;
     background: url('img/a03.png') no-repeat;
     overflow: hidden;
   }
-  
+
   .jssora03l {
     top: 0px;
     left: 8px;
@@ -932,7 +937,7 @@ $like-color: #e74c3c;
     height: 55px;
     z-index: 20;
   }
-  
+
   .jssora03r {
     background-position: -63px -33px;
     top: 0px;
@@ -940,19 +945,19 @@ $like-color: #e74c3c;
     width: 55px;
     height: 55px;
   }
-  
+
   .jssora03l:hover {
     background-position: -123px -33px;
   }
-  
+
   .jssora03r:hover {
     background-position: -183px -33px;
   }
-  
+
   .jssora03l.jssora03ldn {
     background-position: -243px -33px;
   }
-  
+
   .jssora03r.jssora03rdn {
     background-position: -303px -33px;
   }

@@ -74,7 +74,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 100%;
   position: fixed;
   bottom: 74px;
-  opacity: 0.8;
+  opacity: 0.9;
   padding-top: 70px;
   z-index: 1;
 }
@@ -93,7 +93,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "\f0eb";
   color: #fff;
   font-size: 20px;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .leftnav--night:hover::after {
   color: #eb9400;
@@ -113,7 +114,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "\f0eb";
   color: #eb9400;
   font-size: 20px;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .leftnav--night--active:hover::after {
   color: #1868cd;
@@ -128,7 +130,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   bottom: 0px;
   text-align: center;
   cursor: pointer;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .leftnav--btn::after {
   font-family: FontAwesome;
@@ -137,10 +140,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #525252;
   margin-top: 30px;
   top: 50%;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   right: 1px;
   font-size: 15px;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .leftnav--btn:hover {
   background-color: #3d3c3c;
@@ -175,7 +180,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   line-height: 33px;
   width: 100%;
   border-left: 2px solid rgba(24, 104, 205, 0);
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 .leftnav--primary > ul li a:hover {
   background-color: #1f1f28;
@@ -222,7 +228,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 105px;
   position: relative;
   border: 1px solid #1f1f28;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: color, background;
   transition-property: color, background;
   background-color: #23232c;
 }
@@ -237,7 +245,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 18px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .leftnav--secondary ul li #current {
   background-color: #1f1f28;
@@ -371,7 +380,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .footer {
   background-color: #23232c;
-  opacity: 0.8;
+  opacity: 0.9;
   width: 100%;
   height: 70px;
   position: fixed;
@@ -384,7 +393,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: lightgray;
   position: absolute;
   bottom: 70px;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .footer--player--progress {
   opacity: 1;
@@ -444,9 +454,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: lightgray;
   display: inline-block;
   text-decoration: none;
-  margin: 25px 20px 0 20px;
+  margin: 20px 20px 0 20px;
   font-size: 20px;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .footer--controller--icons1::before, .footer--controller--icons2::before, .footer--controller--icons3::before, .footer--controller--icons4::before, .footer--controller--icons5::before, .footer--controller--icons6::before {
@@ -458,6 +469,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .footer--controller--icons1:hover, .footer--controller--icons2:hover, .footer--controller--icons3:hover, .footer--controller--icons4:hover, .footer--controller--icons5:hover, .footer--controller--icons6:hover {
   color: #1868cd;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .footer--controller--icons1::before {
@@ -487,7 +499,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 2px;
   width: 100px;
   position: absolute;
-  top: 9px;
+  top: 13px;
   left: 30px;
 }
 .footer--controller--icons5--volume--progress {
@@ -508,7 +520,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .footer--search {
   position: absolute;
-  top: 25px;
+  top: 24px;
   right: 30px;
 }
 .footer--search::after {
@@ -557,7 +569,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 100%;
   position: fixed;
   bottom: 74px;
-  opacity: 0.8;
+  opacity: 0.9;
   padding-top: 70px;
   right: -270px;
 }
@@ -567,6 +579,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 10px 10px 0 10px;
   bottom: 50px;
   position: relative;
+}
+.search--content hr {
+  margin-top: 0;
 }
 .search--content--titre, .search--content--album, .search--content--artiste {
   margin-bottom: 20px;
@@ -597,7 +612,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin-top: 130px;
 }
 .loader--svg--text--line {
@@ -609,7 +625,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   stroke: white;
   stroke-dasharray: 7% 28%;
   stroke-width: 3px;
-  animation: stroke-offset 2.5s infinite linear;
+  -webkit-animation: stroke-offset 2.5s infinite linear;
+          animation: stroke-offset 2.5s infinite linear;
 }
 .loader--txt:nth-child(1) {
   stroke: #c0d63d;
@@ -694,6 +711,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 6em;
   display: block;
   margin: auto;
+  -webkit-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
 }
 .accueil--flow--playButton::before {
@@ -709,6 +727,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .accueil--flow--playButton:hover {
   text-decoration: none;
   color: #1868cd;
+  -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
   cursor: pointer;
 }
@@ -786,10 +805,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-right: 5px;
   margin-left: 5px;
   cursor: pointer;
+  -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 .accueil--top10--container--bloc--icons1:hover, .accueil--top10--container--bloc--icons2:hover {
   color: #3181e7;
+  -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 .accueil--top10--container--bloc--icons1::before {
@@ -804,10 +825,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-right: 5px;
   margin-left: 5px;
   cursor: pointer;
+  -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 .accueil--top10--container--bloc--icons3:hover {
   color: #ed7669;
+  -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 .accueil--top10--container--bloc--icons3::before {
@@ -877,7 +900,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #SLIDER
 
 \*==============================*/
-.jssor_1 {
+.jssor_1,
+.jssor_2,
+.jssor_3 {
   position: relative;
   top: 0px;
   left: -10px;
