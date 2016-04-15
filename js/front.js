@@ -267,7 +267,7 @@ $( document ).ready(function() {
       $(this).addClass('current');
       var toLoad = $(this).html();  
       $('div.content').html("");
-      $('div.content').load('content/' + toLoad + '.txt');
+      $('div.content').load('http://localhost/content/' + toLoad + '.txt');
       console.log('content/' + toLoad + '.txt');
       
   });

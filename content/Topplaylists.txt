@@ -1,1 +1,52 @@
-dgfdgfd:
+<div class="topPlaylist container">
+        <div class="row">
+          <div class="topPlaylist--bloc1 col-md-3">
+            <h2 class="topPlaylist--bloc1--title1">good vibes only</h2>
+            <img src="img/cover.jpg" alt="" class="topPlaylist--bloc1--picture1">
+            <span class="likeEvent1"></span>
+            <span class="moreEvent1"></span>
+            <span class="playEvent1"></span>
+          </div>
+          
+          <div class="topPlaylist--bloc2 col-md-3">
+            <h2 class="topPlaylist--bloc2--title2">Covers</h2>
+            <img src="img/covers/cover7.jpg" alt="" class="topPlaylist--bloc2--picture2">
+            <span class="likeEvent2"></span>
+            <span class="moreEvent2"></span>
+            <span class="playEvent2"></span>
+          </div>
+          
+          <div class="topPlaylist--bloc3 col-md-3">
+            <h2 class="topPlaylist--bloc3--title3">Chill Hits</h2>
+            <img src="img/covers/cover7.jpeg" alt="" class="topPlaylist--bloc3--picture3">
+            <span class="likeEvent3"></span>
+            <span class="moreEvent3"></span>
+            <span class="playEvent3"></span>
+          </div>
+          
+        <div class="row">
+          <div class="topPlaylist--bloc1 col-md-3">
+            <h2 class="topPlaylist--bloc1--title1">good vibes only</h2>
+            <img src="img/covers/cover7.jpeg" alt="" class="topPlaylist--bloc1--picture1">
+            <span class="likeEvent1"></span>
+            <span class="moreEvent1"></span>
+            <span class="playEvent1"></span>
+          </div>
+          
+          <div class="topPlaylist--bloc2 col-md-3">
+            <h2 class="topPlaylist--bloc2--title2">Covers</h2>
+            <img src="img/covers/cover7.jpg" alt="" class="topPlaylist--bloc2--picture2">
+            <span class="likeEvent2"></span>
+            <span class="moreEvent2"></span>
+            <span class="playEvent2"></span>
+          </div>
+          
+          <div class="topPlaylist--bloc3 col-md-3">
+            <h2 class="topPlaylist--bloc3--title3">Chill Hits</h2>
+            <img src="img/cover.jpg" alt="" class="topPlaylist--bloc3--picture3">
+            <span class="likeEvent3"></span>
+            <span class="moreEvent3"></span>
+            <span class="playEvent3"></span>
+          </div>
+          
+        </div>
