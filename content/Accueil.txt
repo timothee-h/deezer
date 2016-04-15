@@ -1,0 +1,95 @@
+<div class="accueil container">
+        <div class="row">
+          <div class="accueil--flow col-md-7">
+            <div class="accueil--flow--darkBox">
+              <div class="accueil--flow--flowLogo">Flow</div>
+              <span href="#" class="accueil--flow--playButton"></span>
+              <p class="accueil--flow--title">Un mix basé sur vos favoris</p>
+            </div>
+          </div>
+          <div class="accueil--top10 col-md-5">
+            <h2 class="accueil--top10--header">Top 9 des écoutes</h2>
+            <div class="accueil--top10--container">
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">1</p>
+                <img src="img/covers/cover2.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">2</p>
+                <img src="img/covers/cover3.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">3</p>
+                <img src="img/covers/cover4.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">4</p>
+                <img src="img/covers/cover5.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">5</p>
+                <img src="img/covers/cover6.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">6</p>
+                <img src="img/covers/cover7.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">7</p>
+                <img src="img/covers/cover8.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+              <div class="accueil--top10--container--bloc">
+                <p class="accueil--top10--container--bloc--number">9</p>
+                <img src="img/covers/cover9.jpg" alt="" class="accueil--top10--container--bloc--cover">
+                <span class="accueil--top10--container--bloc--title">La musique</span>
+                <p class="accueil--top10--container--bloc--separator"> - </p>
+                <span class="accueil--top10--container--bloc--artist">L'artiste</span>
+                <span id="play" class="accueil--top10--container--bloc--icons1"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons2"></span>
+                <span id="like" class="accueil--top10--container--bloc--icons3"></span>
+              </div>
+            </div>
+          </div>
+        </div>

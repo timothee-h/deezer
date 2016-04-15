@@ -260,13 +260,18 @@ $( document ).ready(function() {
       $(".leftnav--secondary ul").addClass('visible');
     }
   });
-  //current menu
+  //current menu & page loading
   $(".leftnav--primary--yo:eq(0)").addClass('current');
   $(".leftnav--primary--yo").click(function() {
       $(".current").removeClass('current');
       $(this).addClass('current');
+      var toLoad = $(this).html();  
+      $('div.content').html("");
+      $('div.content').load('content/' + toLoad + '.txt');
+      console.log('content/' + toLoad + '.txt');
+      
   });
-  
+  //('"' + toLoad + '.json'+ '"')
   //Cover Animations
   
   $(".topPlaylist--bloc1").hover(function (){
