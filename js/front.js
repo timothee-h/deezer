@@ -266,4 +266,27 @@ $( document ).ready(function() {
       $(".current").removeClass('current');
       $(this).addClass('current');
   });
+  
+  //Cover Animations
+  
+  $(".topPlaylist--bloc1").hover(function (){
+    $(".playEvent1").toggleClass("topPlaylist--bloc1--play1").show('slow');
+    $(".moreEvent1").toggleClass("topPlaylist--bloc1--more1").show('slow');
+    $(".likeEvent1").toggleClass("topPlaylist--bloc1--like1").show('slow');
+    $(".topPlaylist--bloc1--picture1").toggleClass("topPlaylist--bloc1--picture1--active");
+  });
+  
+  $(".topPlaylist--bloc2").hover(function (){
+    $(".playEvent2").toggleClass("topPlaylist--bloc2--play2").show('slow');
+    $(".moreEvent2").toggleClass("topPlaylist--bloc2--more2").show('slow');
+    $(".likeEvent2").toggleClass("topPlaylist--bloc2--like2").show('slow');
+    $(".topPlaylist--bloc2--picture2").toggleClass("topPlaylist--bloc2--picture2--active");
+  });
+  
+  $(".topPlaylist--bloc3").hover(function (){
+    $(".playEvent3").toggleClass("topPlaylist--bloc3--play3").show('slow');
+    $(".moreEvent3").toggleClass("topPlaylist--bloc3--more3").show('slow');
+    $(".likeEvent3").toggleClass("topPlaylist--bloc3--like3").show('slow');
+    $(".topPlaylist--bloc3--picture3").toggleClass("topPlaylist--bloc3--picture3--active");
+  });
 });
